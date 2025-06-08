@@ -5,6 +5,9 @@ import Bookshelf from "../Pages/Bookshelf/Bookshelf";
 import AddBook from "../Pages/AddBook/AddBook";
 import MyBooks from "../Pages/MyBooks/MyBooks";
 import Profile from "../Pages/Profile/Profile";
+import AuthLayout from "../AuthLayout/AuthLayout";
+import Login from "../Pages/Login/Login";
+import Register from "../Pages/Register/register";
 
 export const router =createBrowserRouter([
     {
@@ -30,6 +33,21 @@ export const router =createBrowserRouter([
             {
                path:'/Profile',
                Component:Profile
+            }
+        ]
+    }
+    ,
+    {
+        path:'/auth',
+        Component:AuthLayout,
+        children:[
+            {
+                path:'/auth/login',
+                Component:Login
+            },
+            {
+                path:'/auth/register',
+                Component:Register
             }
         ]
     }
