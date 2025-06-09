@@ -3,7 +3,7 @@ import man1 from '../../assets/man-1.png'
 const PopularAuthors = () => {
     return (
         <div className='md:container  mx-auto my-15'>
-            <h1 className='text-[36px]  font-bold text-center'>Popular Authors</h1>
+            <h1 className='text-[36px]  font-bold text-gray-700 text-center'>Popular Authors</h1>
             <div className="bg-white py-4 mt-5 px-7 rounded-md ">
              <div className="grid md:grid-cols-6 gap-5">
                 <div className='flex flex-col items-center'>
