@@ -1,1 +1,46 @@
 @import "tailwindcss";
+
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #EBF0F5;
+  
+    /* Center slide text vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  
+  .swiper-slide div {
+   
+    width: 100%;
+   height: 100%;
+    
+  } 
+  .swiper-slide div {
+    object-fit: cover;
+  }
+
+
+  :root {
+    --background-color: #ffffff;
+    --foreground-color: #3c3cff;
+    --primary-text-color: #aaaaaa;
+    --secondary-text-color: #ffffff;
+    --toggle-bg: #fde9d9;
+    --toggle-fg: #ffd8e9;
+}
+[data-theme="dark"] {
+    --background-color: #aaaaaa;
+    --foreground-color: #567aff;
+    --primary-text-color: #ffffff;
+    --secondary-text-color: #aaaaaa;
+    --toggle-bg: #283452;
+    --toggle-fg: #aaafff;
+}

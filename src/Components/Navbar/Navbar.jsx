@@ -1,8 +1,26 @@
-import React from "react";
+import React, { use } from "react";
 import logo from "../../assets/logo (2).png";
-import { Link, NavLink } from "react-router";
+import { Link, NavLink, useNavigate } from "react-router";
 import './Navbar.css'
+import { AuthContext } from "../../Provider/AuthProvider";
+import Swal from "sweetalert2";
 const Navbar = () => {
+  const {user,logout}=use(AuthContext)
+  const navigate = useNavigate()
+    const handelLogout=()=>{
+        logout().then(() => {
+        Swal.fire({
+          position: "center",
+          icon: "success",
+          title: "Logout Successful",
+          showConfirmButton: false,
+          timer: 1500,
+        });
+        navigate("/");
+        
+      });
+    }
+
   return (
     <div>
       <nav className=" py-3 px-2 flex items-center bg-[#F1E9F7]">
@@ -28,9 +46,11 @@ const Navbar = () => {
           </NavLink>
         </div>
         <div className="w-3/12 flex justify-end">
-         <Link to='/auth/login'> <button className="text-[25px] bg-blue-600 rounded-md px-4 py-2 text-white font-bold">
-            Login
-          </button></Link>
+        {
+          user? 
+           <button onClick={handelLogout} className="text-[25px] bg-blue-600 rounded-md px-4 py-2 text-white font-bold"> Logout</button>
+           :<Link to='/auth/login'> <button className="text-[25px] bg-blue-600 rounded-md px-4 py-2 text-white font-bold">Login</button></Link>
+        }
         </div>
       </nav>
     </div>
