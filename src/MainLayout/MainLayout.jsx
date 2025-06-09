@@ -9,7 +9,7 @@ import Footer from '../Components/Footer/Footer';
 const MainLayout = () => {
  
     return (
-        <div>
+        <div className='bg-[#F1E9F6]'>
            <Navbar></Navbar>
            
         <div
