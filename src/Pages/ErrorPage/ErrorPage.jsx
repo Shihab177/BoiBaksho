@@ -1,7 +1,8 @@
 import React from 'react';
 import { useNavigate } from 'react-router';
 import { motion } from 'framer-motion';
-
+import Navbar from '../../Components/Navbar/Navbar';
+import Footer from '../../Components/Footer/Footer';
 const ErrorPage = () => {
   const navigate = useNavigate();
 
@@ -10,11 +11,13 @@ const ErrorPage = () => {
   };
 
   return (
-    <motion.div 
-      className="flex flex-col items-center justify-center h-screen bg-gray-100 text-gray-800"
+   <motion.div>
+    <Navbar></Navbar>
+     <motion.div 
+      className="flex flex-col items-center justify-center h-screen text-gray-800"
       initial={{ opacity: 0, scale: 0.95 }}
       animate={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.6 }}
+      transition={{ duration: 0.9 }}
     >
       <h1 className="text-6xl font-bold mb-4 animate-bounce text-red-600">404</h1>
       <p className="text-2xl mb-2 text-[24px]">Oops! Page not found.</p>
@@ -26,6 +29,8 @@ const ErrorPage = () => {
         Go to Home
       </button>
     </motion.div>
+    <Footer></Footer>
+   </motion.div>
   );
 };
 

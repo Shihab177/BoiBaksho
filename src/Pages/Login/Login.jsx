@@ -3,9 +3,11 @@ import React, { use } from "react";
 import { motion } from 'framer-motion';
 import { AuthContext } from '../../Provider/AuthProvider';
 import Swal from 'sweetalert2';
-import { Link, useNavigate } from 'react-router';
+import { Link, useLocation, useNavigate } from 'react-router';
 
 const Login = () => {
+  const location =useLocation()
+  console.log(location)
       const navigate = useNavigate();
   const { loginWithGoogle,loginWithEmailPassword } = use(AuthContext);
   

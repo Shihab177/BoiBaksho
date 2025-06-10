@@ -9,6 +9,7 @@ import AuthLayout from "../AuthLayout/AuthLayout";
 import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/register";
 import ErrorPage from "../Pages/ErrorPage/ErrorPage";
+import PrivateRoute from "../Provider/PrivateRoute";
 
 export const router =createBrowserRouter([
     {
@@ -26,15 +27,15 @@ export const router =createBrowserRouter([
             },
             {
                 path:'/AddBook',
-                Component:AddBook
+                element:<PrivateRoute><AddBook></AddBook></PrivateRoute>
             },
             {
                 path:'/MyBooks',
-                Component:MyBooks
+                element:<PrivateRoute><MyBooks></MyBooks></PrivateRoute>
             },
             {
                path:'/Profile',
-               Component:Profile
+               element:<PrivateRoute><Profile></Profile></PrivateRoute>
             }
         ]
     }
