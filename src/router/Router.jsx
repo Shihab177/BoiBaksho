@@ -10,6 +10,7 @@ import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/register";
 import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 import PrivateRoute from "../Provider/PrivateRoute";
+import Details from "../Pages/Details/Details";
 
 export const router =createBrowserRouter([
     {
@@ -36,6 +37,10 @@ export const router =createBrowserRouter([
             {
                path:'/Profile',
                element:<PrivateRoute><Profile></Profile></PrivateRoute>
+            },
+            {
+                path:'/details/:id',
+                element:<Details></Details>
             }
         ]
     }

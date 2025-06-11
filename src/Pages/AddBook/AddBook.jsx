@@ -11,7 +11,7 @@ const AddBook = () => {
         const from =e.target
         const fromData = new FormData(from);
         const newBook = Object.fromEntries(fromData.entries());
-        console.log(newBook)
+          newBook.upvote = parseInt(newBook.upvote);
 
         axios.post ('http://localhost:8000/books',newBook)
         .then(data=>{
@@ -56,11 +56,11 @@ const AddBook = () => {
 
        <fieldset>
         <label htmlFor=""> User Email</label>
-         <input value={user?.email} name='user_email' readOnly className="w-full border p-2 bg-gray-100" />
+         <input value={user?.email || ""} name='user_email' readOnly className="w-full border p-2 bg-gray-100" />
        </fieldset>
         <fieldset>
             <label htmlFor="">User Name</label>
-            <input value={user?.displayName} name='user_name' readOnly className="w-full border p-2 bg-gray-100" />
+            <input value={user?.displayName || ""} name='user_name' readOnly className="w-full border p-2 bg-gray-100" />
         </fieldset>
 
        <fieldset>
@@ -84,7 +84,7 @@ const AddBook = () => {
         
          <fieldset>
             <label htmlFor="">Upvote</label>
-            <input value="0" name='upvote' readOnly className="w-full border p-2 bg-gray-100" />
+            <input value={0} name='upvote' readOnly className="w-full border p-2 bg-gray-100" />
          </fieldset>
 
          </div>
