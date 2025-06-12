@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Link, useNavigate } from "react-router";
+import Loading from "../../Components/loading/Loading";
 const Bookshelf = () => {
   const navigate =useNavigate()
   const [books, setBooks] = useState([]);
@@ -21,11 +22,17 @@ const Bookshelf = () => {
     const handelDetails = (id)=>{
           navigate(`/details/${id}`)
     } 
+    if(loading){
+      return <Loading></Loading>
+    }
   return (
     <div className="md:container mx-auto my-10">
-      <h1 className="text-[36px] text-center font-bold text-gray-800">
+   
+      <motion.h1 initial={{ opacity: 0, scale: 0.95 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.6 }} className="text-[36px] text-center font-bold text-gray-800">
         Browse All Books
-      </h1>
+      </motion.h1>
 
       <motion.div
         initial={{ opacity: 0, scale: 0.95 }}

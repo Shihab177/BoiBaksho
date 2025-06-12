@@ -65,7 +65,7 @@ const AddBook = () => {
 
        <fieldset>
         <label htmlFor="">Book Category</label>
-          <select name="book_category"  className="w-full border p-2">
+          <select name="book_category" defaultValue="" required className="w-full border p-2">
           <option disabled value="">Select Book Category</option>
           <option>Fiction</option>
           <option>Non-Fiction</option>
@@ -74,7 +74,7 @@ const AddBook = () => {
        </fieldset>
         <fieldset>
             <label htmlFor="">Reading Status</label>
-            <select name="reading_status"  className="w-full border p-2">
+            <select name="reading_status" defaultValue="" required  className="w-full border p-2">
                 <option disabled value="">Select Reading Status</option>
           <option>Read</option>
           <option>Reading</option>

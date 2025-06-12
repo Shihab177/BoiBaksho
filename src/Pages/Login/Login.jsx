@@ -68,7 +68,7 @@ const Login = () => {
     return (
         <motion.div initial={{ opacity: 0, scale: 0.95 }}
       animate={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.6 }}>
+      transition={{ duration: 0.6 }} className="mb-6">
              <div className="">
       <div className=" md:max-w-md  p-2 mx-2 rounded-md border border-gray-300   sm:p-8 md:mx-auto mt-9 bg-[#F6F6F6] shadow-md dark:bg-gray-50 dark:text-gray-800">
         <h2 className="mb-3 text-3xl font-semibold text-center">

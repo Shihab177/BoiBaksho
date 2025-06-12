@@ -4,11 +4,13 @@ import { useParams } from "react-router";
 import { AuthContext } from "../../Provider/AuthProvider";
 import Upvote from "./Upvote";
 import Review from "./Review";
-
+import Loading from "../../Components/loading/Loading";
+import { motion } from "framer-motion";
 const Details = () => {
   const [loading, setLoading] = useState(true);
   const [book, setBook] = useState();
   const { id } = useParams();
+   
   useEffect(() => {
     axios.get(`http://localhost:8000/details/${id}`).then((data) => {
       setBook(data.data);
@@ -16,8 +18,14 @@ const Details = () => {
     });
   }, [id]);
   console.log(book);
+   if(loading){
+      return <Loading></Loading>
+    }
   return (
-    <div className="max-w-4xl bg-white p-5 rounded-md shadow-md my-7 mx-auto ">
+    <motion.div  initial={{ opacity: 0, scale: 0.95 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.6 }} className="max-w-4xl bg-white p-5 rounded-md shadow-md my-7 mx-auto ">
+      
      
         {loading ? (
           <p className="text-[30px] text-center mt-7 font-semibold">Loading Book Details ....</p>
@@ -77,7 +85,7 @@ const Details = () => {
 
         <Review book={book}></Review>
      
-    </div>
+    </motion.div>
   );
 };
 
