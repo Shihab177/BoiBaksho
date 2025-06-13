@@ -11,6 +11,8 @@ import Register from "../Pages/Register/register";
 import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 import PrivateRoute from "../Provider/PrivateRoute";
 import Details from "../Pages/Details/Details";
+import BookUpdate from "../Pages/MyBooks/BookUpdate";
+
 
 export const router =createBrowserRouter([
     {
@@ -41,6 +43,10 @@ export const router =createBrowserRouter([
             {
                 path:'/details/:id',
                 element:<Details></Details>
+            },
+            {
+                path:'/bookUpdate/:id',
+                element:<PrivateRoute><BookUpdate></BookUpdate></PrivateRoute>
             }
         ]
     }

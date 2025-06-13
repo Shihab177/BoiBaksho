@@ -3,7 +3,9 @@ import { motion } from "framer-motion";
 import axios from 'axios';
 import {AuthContext} from '../../Provider/AuthProvider'
 import Swal from 'sweetalert2';
+import { useNavigate } from 'react-router';
 const MyBooks = () => {
+  const navigate = useNavigate()
   const [refresh, setRefresh] = useState(false);
     const {user}=use(AuthContext)
     const [books,setBooks]=useState([])
@@ -120,7 +122,7 @@ const MyBooks = () => {
                 </div>
               </div>
               <div className="flex mt-6 gap-6">
-                <button className='text-[20px] font-semibold px-4 py-2 text-white rounded-sm bg-blue-500 hover:bg-blue-700'>Update</button>
+                <button  onClick={()=>navigate(`/bookUpdate/${book?._id}`)} className='text-[20px] font-semibold px-4 py-2 text-white rounded-sm bg-blue-500 hover:bg-blue-700'>Update</button>
                 <button onClick={()=>handelDelete(book?._id)} className='text-[20px] font-semibold px-4 py-2 text-white rounded-sm bg-red-500 hover:bg-red-600'>Delete</button>
               </div>
             </div>
