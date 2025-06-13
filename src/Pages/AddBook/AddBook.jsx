@@ -51,7 +51,7 @@ const AddBook = () => {
          </fieldset>
         <fieldset>
             <label htmlFor="">Author Name</label>
-             <input name="book_author"  required placeholder="Author Name" className="w-full border p-2" />
+             <input name="book_author" type="text"  required placeholder="Author Name" className="w-full border p-2" />
         </fieldset>
 
        <fieldset>
