@@ -37,13 +37,23 @@ console.log(review)
 
     
   };
+  const handleDelete = ()=>{
+    axios.delete(`http://localhost:8000/review/${review?._id}`)
+    .then(data=>{
+      console.log(data.data)
+     onUpdate()
+    })
+    .catch(error=>{
+      console.log(error)
+    })
+  }
 
   return (
     <div className="space-x-2">
       <button onClick={handleEditBtn}>
         <FaEdit size={22} />
       </button>
-      <button onClick={handleEditBtn}>
+      <button onClick={handleDelete}>
         <MdDelete size={22} />
       </button>
 
@@ -62,9 +72,9 @@ console.log(review)
 
             <div className="modal-action">
               {/* Close Button */}
-              <form method="dialog">
+              <div method="dialog">
                 <button className="btn">Close</button>
-              </form>
+              </div>
 
               {/* Update Button */}
               <button type="submit" className="btn btn-primary ml-2">
