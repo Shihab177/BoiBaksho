@@ -75,7 +75,7 @@ const MyBooks = () => {
         className="bg-white mt-5 p-4 rounded-sm"
       >
         {loading ? (
-          <div className="text-center font-semibold text-lg mt-10">
+          <div className="text-center min-h-screen font-semibold text-lg mt-10">
             {" "}
             Loading books...
           </div>
