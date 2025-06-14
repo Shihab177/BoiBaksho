@@ -14,7 +14,7 @@ const Banner = () => {
     return (
         <motion.div initial={{ opacity: 0, scale: 0.95 }}
       animate={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.6 }} className='md:h-[620px]  rounded-br-md rounded-bl-2xl h-50 '>
+      transition={{ duration: 0.6 }} className='md:h-[520px] md:container mx-auto  rounded-br-md rounded-bl-2xl h-50 '>
            
            <Swiper navigation={true} pagination={{ clickable: true }}  modules={[Navigation,Pagination ]} className="mySwiper">
         <SwiperSlide className=''>

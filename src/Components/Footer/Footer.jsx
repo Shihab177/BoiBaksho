@@ -42,9 +42,9 @@ const Footer = () => {
       {/* Bottom Social + Copyright */}
       <div className="border-t border-gray-700 mt-8 pt-4 text-center">
         <div className="flex justify-center space-x-4 mb-2">
-          <a href="https://facebook.com" target="_blank" rel="noreferrer" className="hover:text-blue-400"><FaFacebook /></a>
-          <a href="https://twitter.com" target="_blank" rel="noreferrer" className="hover:text-blue-300"><FaTwitter /></a>
-          <a href="https://instagram.com" target="_blank" rel="noreferrer" className="hover:text-pink-400"><FaInstagram /></a>
+          <a href="https://facebook.com" target="_blank" rel="noreferrer" className="hover:text-blue-400"><FaFacebook size={26}/></a>
+          <a href="https://twitter.com" target="_blank" rel="noreferrer" className="hover:text-blue-300"><FaTwitter size={26}/></a>
+          <a href="https://instagram.com" target="_blank" rel="noreferrer" className="hover:text-pink-400"><FaInstagram size={26}/></a>
         </div>
         <p className="text-sm text-gray-400">
           &copy; {new Date().getFullYear()} BoiBaksho. All rights reserved.

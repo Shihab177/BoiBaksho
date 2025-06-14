@@ -84,7 +84,7 @@ const Bookshelf = () => {
                   </p>
                 </div>
               </div>
-             <button onClick={()=>handelDetails(book._id)} className="text-[24px] text-white font-semibold py-2 bg-blue-500 hover:-blue-700 w-full rounded-md mt-6">Details</button>
+             <button onClick={()=>handelDetails(book._id)} className="text-[24px]  font-semibold py-2 text-white bg-blue-500 hover:bg-blue-700 w-full rounded-2xl mt-6">Details</button>
             </div>
           ))}
         </div>

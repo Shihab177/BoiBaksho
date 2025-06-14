@@ -1,5 +1,4 @@
-.active{
-    text-decoration: underline;
-    text-decoration-color: blue;
-    text-decoration-thickness: 3px; 
+a.active{
+    border-bottom: 3px solid blue; 
+    
 }
