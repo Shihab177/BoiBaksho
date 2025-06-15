@@ -55,7 +55,7 @@ const Bookshelf = () => {
         )}
 
         {
-          books && 
+          books.length > 0 && 
           <div className="grid md:grid-cols-3 gap-5">
           {books.map((book) => (
             <div
