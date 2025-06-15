@@ -43,12 +43,13 @@ const FeaturedCategories = () => {
       </h1>
       <div className="bg-white rounded-sm shadow-md p-4 mt-5">
         <div className="grid md:grid-cols-3 gap-4">
-          <div className="rounded-md bg-[#D9F3DD] p-3 overflow-y-auto max-h-[400px]">
+          <div className="rounded-md bg-[#D9F3DD] max-h-[420px]">
             <h2 className="text-[25px] font-semibold mt-3 text-center">
               Fiction
             </h2>
             <hr className="border border-dashed border-purple-700" />
-            {loading ? (
+            <div className="max-h-[340px] p-3 overflow-y-auto">
+              {loading ? (
               <p className="font-semibold text-[20px] mt-5 text-center">
                 Loading....
               </p>
@@ -71,13 +72,15 @@ const FeaturedCategories = () => {
                 </div>
               ))
             )}
+            </div>
           </div>
-          <div className="rounded-md bg-[#EDF2FA] p-3 overflow-y-auto max-h-[400px]">
+          <div className="rounded-md bg-[#EDF2FA]  max-h-[420px]">
             <h2 className="text-[25px] font-semibold mt-3 text-center">
               Non-Fiction
             </h2>
             <hr className="border border-dashed border-purple-700" />
-            {loading ? (
+            <div className="max-h-[340px] p-3 overflow-y-auto">
+              {loading ? (
               <p className="font-semibold text-[20px] mt-5 text-center">
                 Loading....
               </p>
@@ -100,14 +103,16 @@ const FeaturedCategories = () => {
                 </div>
               ))
             )}
+            </div>
           </div>
           
-          <div className="rounded-md bg-[#D4E8EE] p-3 overflow-y-auto max-h-[400px]">
+          <div className="rounded-md bg-[#D4E8EE] max-h-[420px]">
             <h2 className="text-[25px] font-semibold mt-3 text-center">
               Fantasy
-            </h2>
+            </h2> 
             <hr className="border border-dashed border-purple-700" />
-            {loading ? (
+            <div className="max-h-[340px] p-3 overflow-y-auto">
+              {loading ? (
               <p className="font-semibold text-[20px] mt-5 text-center">
                 Loading....
               </p>
@@ -130,6 +135,7 @@ const FeaturedCategories = () => {
                 </div>
               ))
             )}
+            </div>
           </div>
           
           
