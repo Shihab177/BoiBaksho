@@ -1,66 +1,89 @@
-import React from 'react';
-import man1 from '../../assets/man-1.png'
+import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/autoplay";
+import "swiper/css/pagination";
+
+import { Autoplay, Pagination } from "swiper/modules";
+
 import man2 from '../../assets/ahmudulla.avif'
 import man3 from '../../assets/humaun.jpg'
 import man4 from '../../assets/munjarin.avif'
 import man5 from '../../assets/kh.jpg'
-import man6 from '../../assets/eleas.jpg'
+
+const testimonials = [
+  {
+    image: man5,
+    name: "Junayed Ahmed",
+    review:"45",
+    Book:"Harry Potter and the Prisoner of Azkaban",
+    text: `The most thrilling entry in the series! The time-turner plot was clever, and the new characters added depth`,
+  },
+  {
+    image: man2,
+    name: "Manik Khan",
+    review:"42",
+    Book:"The Kite Runner",
+    text: `"An emotional rollercoaster. A gripping story of friendship, guilt, and redemption set against a rich cultural backdrop."`,
+  },
+  {
+    image: man3,
+    name: "Shihab Islam",
+    review:"39",
+    Book:"The Hobbit",
+    text: `"A magical adventure filled with charm and courage. Tolkien's world is rich, immersive, and unforgettable"`,
+  },
+  {
+    image: man4,
+    name: "Rebeca-M",
+    review:"32",
+    Book:"A Brief History of Humankind",
+    text: `"Mind-expanding and thought-provoking. This book completely changed how I view human history and civilization."`,
+  },
+];
 
 const TopReviewers = () => {
-    return (
-        <div className='md:container  mx-auto my-15'>
-            <h1 className='text-[36px]  font-bold text-gray-700 text-center'>Top Reviewers</h1>
-            <div className="bg-white py-4 mt-5 px-7 rounded-md ">
-             <div className="grid md:grid-cols-6 gap-5">
-                <div className='flex hover:shadow-2xl bg-gray-100 rounded-md p-1 flex-col items-center'>
-                    <div className="border-5 border-gray-300 rounded-full h-32 w-32">
-                       <img className='w-full h-full rounded-full' src={man1} alt="" />
-                    </div>
-                    <h2 className='text-[20px] text-gray-900 font-semibold'>jhankar mahbub</h2>
-                    <p className='text-yellow-600 font-medium'>Review : 16</p>
-                </div>
-                <div className='flex bg-gray-100 hover:shadow-2xl rounded-md p-1 flex-col items-center'>
-                    <div className="border-5 border-gray-300 rounded-full h-32 w-32">
-                       <img className='w-full h-full rounded-full' src={man3} alt="" />
-                    </div>
-                    <h2 className='text-[20px] text-gray-900 font-semibold'>Humayun Ahmed</h2>
-                     <p className='text-yellow-600 font-medium'>Review : 14</p>
-                </div>
-                <div className='flex bg-gray-100 hover:shadow-2xl rounded-md p-1 flex-col items-center'>
-                    <div className="border-5 border-gray-300 rounded-full h-32 w-32">
-                       <img className='w-full h-full rounded-full' src={man2} alt="" />
-                    </div>
-                    <h2 className='text-[20px] text-gray-900 font-semibold'>Sheikh Ahmadullah</h2>
-                     <p className='text-yellow-600 font-medium'>Review : 11</p>
-                </div>
-                <div className='flex bg-gray-100 hover:shadow-2xl rounded-md p-1 flex-col items-center'>
-                    <div className="border-5 border-gray-300 rounded-full h-32 w-32">
-                       <img className='w-full h-full rounded-full' src={man4} alt="" />
-                    </div>
-                    <h2 className='text-[20px] text-gray-900 font-semibold'>Lana Roy</h2>
-                     <p className='text-yellow-600 font-medium'>Review : 11</p>
-                </div>
-                <div className='flex bg-gray-100 hover:shadow-2xl rounded-md p-1 flex-col items-center'>
-                    <div className="border-5 border-gray-300 rounded-full h-32 w-32">
-                       <img className='w-full h-full rounded-full' src={man5} alt="" />
-                    </div>
-                    <h2 className='text-[20px] text-gray-900 font-semibold'>Zonayed Ahmed</h2>
-                     <p className='text-yellow-600 font-medium'>Review : 8</p>
-                </div>
-                <div className='flex bg-gray-100 hover:shadow-2xl rounded-md p-1 flex-col items-center'>
-                    <div className="border-5 border-gray-300 rounded-full h-32 w-32">
-                       <img className='w-full h-full rounded-full' src={man6} alt="" />
-                    </div>
-                    <h2 className='text-[20px] text-gray-900 font-semibold'>Muhammad Elias</h2>
-                     <p className='text-yellow-600 font-medium'>Review : 7</p>
-                </div>
-                
-                
-             </div>
+  return (
+    <div className="md:container mx-auto my-10 md:my-20 px-4">
+      <h1 className="md:text-[40px] text-[19px] font-bold text-center mb-7">Top Reviewers</h1>
+      
+
+      <Swiper
+        modules={[Autoplay, Pagination]}
+        autoplay={{ delay: 3000, disableOnInteraction: false }}
+        loop={true}
+        pagination={{ clickable: true }}
+        spaceBetween={30}
+        slidesPerView={1}
+        className="pb-16 " // 👈 Added padding-bottom
+      >
+        {testimonials.map((item, index) => (
+          <SwiperSlide key={index}>
+            <div className="flex flex-col md:flex-row pt-5  bg-white justify-center gap-15 text-center md:text-left">
+              <img
+                src={item.image}
+                alt={item.name}
+                className="w-42 h-42 rounded-full object-cover mx-auto md:mx-0"
+              />
+              <div className="text-center max-w-2xl">
+                 <p className="mt-4  font-semibold text-black">
+                 Name : {item.name}
+                </p>
+                <p className="text-yellow-800 font-bold mb-4">Review : {item.review}</p>
+
+                <p className="text-[27px] font-semibold">One review:</p>
+                <p className="font-semibold">Book Name : {item.Book}</p>
+                <p className="text-black font-semibold text-lg leading-relaxed italic mb-8">
+                  {item.text}
+                </p>
+               
+              </div>
             </div>
-        </div>
-    );
+          </SwiperSlide>
+        ))}
+      </Swiper>
+    </div>
+  );
 };
 
 export default TopReviewers;
-

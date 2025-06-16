@@ -27,7 +27,7 @@ const Bookshelf = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8000/books")
+      .get("http://localhost:8000/allbooks")
       .then((data) => {
         setBooks(data.data);
         setLoading(false);
@@ -130,7 +130,7 @@ const Bookshelf = () => {
                       Status: {book.reading_status}
                     </p>
                      <p className="text-sm text-yellow-600 mt-1 font-semibold">
-                      Upvotes: {book.upvote}
+                      Upvote: {book.upvote}
                     </p>
                     
                   </div>

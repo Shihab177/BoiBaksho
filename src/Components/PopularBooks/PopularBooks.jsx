@@ -46,7 +46,7 @@ const PopularBooks = () => {
                   </p>
                   <p className="text-sm text-yellow-600 mt-1 font-semibold">
                    
-                    Upvotes: {book.upvote}
+                    Upvote: {book.upvote}
                   </p>
                 </div>
               </div>

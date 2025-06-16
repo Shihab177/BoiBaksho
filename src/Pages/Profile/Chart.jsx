@@ -46,29 +46,33 @@ const Chart = ({ book }) => {
   console.log(formattedData);
   return (
     <div>
-      <div className="md:max-w-[550px] mx-auto flex justify-center ">
+      <div className="md:container bg-white rounded-md shadow-md p-4 mx-auto">
         <div>
           <h2 className="text-[32px] font-semibold">
-            <span className="text-blue-600">My </span>Bookshelf Summary
+            <span className="">My </span>Bookshelf Summary
           </h2>
           <p className="text-[22px] font-semibold">
-            Total Books :{book.length}
+            Total Books :  {book.length}
           </p>
-          <p className="text-[22px] font-semibold">Categories:</p>
-          {formattedData.map((item, index) => (
-            <div className="text-[19px] font-medium" key={index}>
-              <p>
+          <p className="text-[22px] text-center font-semibold">Categories:</p>
+          <div className="flex mt-4 justify-around">
+            {formattedData.map((item, index) => (
+            
+              <p className="text-[19px] font-medium" key={index}>
                 {item.name} : <span>{item?.Book}</span>
               </p>
-            </div>
+            
           ))}
         </div>
+          </div>
       </div>
-      <hr className="border border-dashed border-purple-800 my-4"/>
-      <h2 className="text-[32px] text-center text-[#28BB98] font-semibold">
+     
+       { book.length > 0 &&
+        <div>
+                <h2 className="text-[32px] text-center text-[#28BB98] font-semibold">
         <span className="text-blue-600 text-[36px]">C</span>hart by Category
       </h2>
-      <div className=" mb-10 mt-2 bg-white h-full border rounded-md border-gray-400">
+      <div className=" mb-10 mt-2 bg-white h-full  rounded-md shadow-md">
        <ResponsiveContainer width="100%" height={400}>
   <PieChart>
     <Pie
@@ -98,6 +102,8 @@ const Chart = ({ book }) => {
 </ResponsiveContainer>
 
       </div>
+        </div>
+       }
     </div>
   );
 };

@@ -13,6 +13,7 @@ const Home = () => {
             <Banner></Banner>
             <PopularBooks></PopularBooks>
             <FeaturedCategories></FeaturedCategories>
+            
             <TopReviewers></TopReviewers>
             <TopReviewedBooks></TopReviewedBooks>
         </div>

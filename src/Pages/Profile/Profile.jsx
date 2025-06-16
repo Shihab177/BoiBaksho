@@ -11,7 +11,10 @@ const Profile = () => {
   useEffect(() => {
     if (user) {
       axios
-        .get(`http://localhost:8000/books?email=${user?.email}`)
+        .get(`http://localhost:8000/books?email=${user?.email}`,{
+            headers: {
+              Authorization: `Bearer ${user.accessToken}`
+            }})
         .then((res) => {
           setBook(res.data);
         });
@@ -25,21 +28,23 @@ const Profile = () => {
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.6 }}
     >
-      <div className="mx-auto  flex justify-center max-w-250">
-        <div className="flex gap-6 items-center">
-          <img
-            className="border-gray-300 rounded-full border-3 h-50 w-50"
+      <div className="md:container mx-auto p-4 bg-white shadow-md rounded-md my-5 ">
+        <h1 className="font-bold text-center  text-[30px]">Profile</h1>
+          <div className="flex items-center gap-5">
+            <img
+            className="border-gray-300 rounded-full border-3 h-30 w-30"
             referrerPolicy="no-referrer"
             src={user?.photoURL}
             alt=""
           />
-          <div className="text-[26px] font-semibold">
-            <h1>Name: {user?.displayName}</h1>
-            <h1>Email: {user?.email}</h1>
+          <div className="text-[20px] flex flex-col gap-3  font-semibold">
+            <h1 className="text-[26px] font-bold"> {user?.displayName}</h1>
+            <h1 className="text-gray-600 font-bold">{user?.email}</h1>
           </div>
-        </div>
+          </div>
+        
       </div>
-      <hr className="border border-dashed border-purple-800 my-4" />
+     
 
       <Chart book={book}></Chart>
     </motion.div>

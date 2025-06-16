@@ -10,11 +10,15 @@ const MyBooks = () => {
     const {user}=use(AuthContext)
     const [books,setBooks]=useState([])
     const [loading,setLoading]=useState(true)
-
+    console.log(user.accessToken)
 
     useEffect(()=>{
         if(user){
-          axios.get(`http://localhost:8000/books?email=${user?.email}`)
+          axios.get(`http://localhost:8000/books?email=${user?.email}`,{
+            headers: {
+              Authorization: `Bearer ${user.accessToken}`
+            }
+          })
         .then(data=>{
           console.log(data.data)
         

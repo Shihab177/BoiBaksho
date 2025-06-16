@@ -12,9 +12,9 @@ const TopReviewedBooks = () => {
   return (
     <div className="md:container  mx-auto my-15">
       <h1 className="text-[36px]  font-bold text-gray-700 text-center">
-        Top Reviewed Books
+        Top Reviewed & Upvote Books
       </h1>
-      <div className="bg-white mt-5 max-h-80 rounded-sm p-5 shadow-md">
+      <div className="bg-white mt-5 max-h-130 rounded-sm p-5 shadow-md">
         <div className="grid gap-4 md:grid-cols-4 grid-cols-2 ">
           <motion.div
             whileHover={{ scale: 1.04 }}
@@ -27,6 +27,7 @@ const TopReviewedBooks = () => {
             <div>
               <p className="hover:text-blue-500"> Qur'an and Tafsir</p>
             <p className='text-yellow-600 font-medium'>Review :42</p>
+            <p className="text-[14px] text-yellow-600 font-medium">Upvote: 84</p>
             </div>
           </motion.div>
           <motion.div
@@ -42,6 +43,7 @@ const TopReviewedBooks = () => {
               Marhaba JavaScript e maro thaba
             </p>
             <p className='text-yellow-600 font-medium'>Review : 40</p>
+             <p className="text-[14px] text-yellow-600 font-medium">Upvote: 74</p>
             </div>
           </motion.div>
           <motion.div
@@ -56,6 +58,7 @@ const TopReviewedBooks = () => {
             <div>
                <p className="hover:text-blue-500">Language Studies and Grammar</p>
                <p className='text-yellow-600 font-medium'>Review : 39</p>
+                <p className="text-[14px] text-yellow-600 font-medium">Upvote: 72</p>
             </div>
             
           </motion.div>
@@ -73,6 +76,7 @@ const TopReviewedBooks = () => {
               Stories for Children and Teens
             </p>
                <p className='text-yellow-600 font-medium'>Review : 35</p>
+                <p className="text-[14px] text-yellow-600 font-medium">Upvote: 69</p>
             </div>
           </motion.div>
           <motion.div
@@ -86,6 +90,7 @@ const TopReviewedBooks = () => {
            <div>
              <p className="hover:text-blue-500"> Madrasa Books</p>
               <p className='text-yellow-600 font-medium'>Review : 31</p>
+               <p className="text-[14px] text-yellow-600 font-medium">Upvote: 67</p>
            </div>
           </motion.div>
           <motion.div
@@ -99,6 +104,7 @@ const TopReviewedBooks = () => {
            <div>
              <p className="hover:text-blue-500">Contemporary Novels</p>
             <p className='text-yellow-600 font-medium'>Review : 26</p>
+             <p className="text-[14px] text-yellow-600 font-medium">Upvote: 61</p>
            </div>
           </motion.div>
           <motion.div
@@ -112,6 +118,7 @@ const TopReviewedBooks = () => {
            <div>
              <p className="hover:text-blue-500">Biography of the Prophet</p>
             <p className='text-yellow-600 font-medium'>Review : 26</p>
+             <p className="text-[14px] text-yellow-600 font-medium">Upvote: 58</p>
            </div>
           </motion.div>
           <motion.div
@@ -125,6 +132,8 @@ const TopReviewedBooks = () => {
           <div>
               <p className="hover:text-blue-500">Thriller</p>
             <p className='text-yellow-600 font-medium'>Review : 21</p>
+              <p className="text-[14px] text-yellow-600 font-medium">Upvote: 43</p>
+            
           </div>
           </motion.div>
         </div>
