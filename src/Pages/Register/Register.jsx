@@ -6,7 +6,8 @@ import { AuthContext } from "../../Provider/AuthProvider";
 
 const Register = () => {
   const navigate = useNavigate();
-  const { loginWithGoogle, registerUser, updateUser,setUser } = use(AuthContext);
+  const { loginWithGoogle, registerUser, updateUser, setUser } =
+    use(AuthContext);
 
   const handelGoogleLogin = () => {
     loginWithGoogle()
@@ -17,8 +18,10 @@ const Register = () => {
           title: "Register Successful",
           showConfirmButton: false,
           timer: 1500,
-        });
-        navigate("/");
+        }).then(() => {
+      navigate("/");
+    });
+        
       })
       .catch((error) => {
         const errorMessage = error.message;
@@ -67,24 +70,27 @@ const Register = () => {
     }
     registerUser(email, password)
     .then((result) => {
-      const user=result.user
+      const user = result.user;
       updateUser({ displayName: name, photoURL: photo })
         .then(() => {
           setUser({ ...user, displayName: name, photoURL: photo });
         })
         .catch(() => {
           setUser(user);
-        
         });
-    });
-    navigate("/"),
+        
       Swal.fire({
         position: "center",
         icon: "success",
         title: "Register Successful",
         showConfirmButton: false,
         timer: 1500,
-      }).catch((error) => {
+      }).then(() => {
+      navigate("/");
+    });
+    })
+   
+      .catch((error) => {
         const errorMessage = error.message;
         Swal.fire({
           position: "center",
@@ -103,7 +109,7 @@ const Register = () => {
           <button
             onClick={handelGoogleLogin}
             aria-label="Login with Google"
-            type="btn"
+            type="button"
             className="flex w-full items-center justify-center  p-4 space-x-4 border rounded-md focus:ring-2 focus:ring-offset-1 dark:border-gray-600 bg-blue-600 text-white hover:bg-blue-700"
           >
             <svg
@@ -162,6 +168,7 @@ const Register = () => {
                 <input
                   name="password"
                   id="password"
+                  type="password"
                   required
                   placeholder="*****"
                   className="w-full px-3 py-2 border rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600"
