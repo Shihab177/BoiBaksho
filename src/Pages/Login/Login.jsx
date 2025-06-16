@@ -20,9 +20,9 @@ const Login = () => {
           title: "Login Successful",
           showConfirmButton: false,
           timer: 1500,
-        }).then(() => {
+        })
           navigate(`${location.state ? location.state : "/"}`);
-        });
+        
       })
       .catch((error) => {
         const errorMessage = error.message;
@@ -50,10 +50,10 @@ const Login = () => {
           title: "Login Successful",
           showConfirmButton: false,
           timer: 1500,
-        }).then(() => {
+        })
            form.reset();
           navigate(`${location.state ? location.state : "/"}`);
-        });
+        
        
       })
       .catch((error) => {

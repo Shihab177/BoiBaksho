@@ -1,19 +1,19 @@
-# 📚 Project Name: BoiBaksho
+#  Project Name: BoiBaksho
 
-## 🎯 Purpose
+##  Purpose
 
 BoiBaksho is a digital bookshelf web application where users can manage their reading list. They can add books they’ve read, are reading, or want to read. Users can also share reviews, upvote books, and track their reading progress in a clean, organized way.
 
 ---
 
-## 🌐 Live URL
+##  Live URL
 
 🔗 [https://boibaksho.vercel.app](https://boibaksho.vercel.app)  
 > _(Replace with your actual live link)_
 
 ---
 
-## ✨ Key Features
+##  Key Features
 
 - Add books with title, author, category, status, and overview
 - View and upvote books added by others
@@ -25,9 +25,9 @@ BoiBaksho is a digital bookshelf web application where users can manage their re
 
 ---
 
-## 📦 NPM Packages Used
+##  NPM Packages Used
 
-### 🔧 Frontend:
+###  Frontend:
 - react-router – Routing management
 - axios – API requests
 - framer-motion – Animations
@@ -36,7 +36,7 @@ BoiBaksho is a digital bookshelf web application where users can manage their re
 - daisyui *(optional UI library)*
 - react-toastify or sweetalert2 – Notification & Alerts
 
-### 🔧 Backend:
+###  Backend:
 - express – Server framework
 - mongoose – MongoDB interaction
 - cors – CORS handling

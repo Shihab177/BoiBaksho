@@ -18,9 +18,9 @@ const Register = () => {
           title: "Register Successful",
           showConfirmButton: false,
           timer: 1500,
-        }).then(() => {
+        })
       navigate("/");
-    });
+    
         
       })
       .catch((error) => {
@@ -85,9 +85,9 @@ const Register = () => {
         title: "Register Successful",
         showConfirmButton: false,
         timer: 1500,
-      }).then(() => {
+      })
       navigate("/");
-    });
+    
     })
    
       .catch((error) => {

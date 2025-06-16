@@ -48,6 +48,7 @@ export const router =createBrowserRouter([
                 path:'/bookUpdate/:id',
                 element:<PrivateRoute><BookUpdate></BookUpdate></PrivateRoute>
             }
+            
         ]
     }
     ,

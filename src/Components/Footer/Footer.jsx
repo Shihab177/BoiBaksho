@@ -10,7 +10,7 @@ const Footer = () => {
         {/* Logo + Website Name */}
         <div className="flex flex-col items-start">
           <div className="flex items-center gap-2 text-xl font-bold">
-            <img className='w-14 h-14' src={logo} alt="" />
+            <img className='w-14 h-14 rounded-sm' src={logo} alt="" />
             <span>BoiBaksho</span>
           </div>
           <p className="text-sm mt-2 text-gray-400">

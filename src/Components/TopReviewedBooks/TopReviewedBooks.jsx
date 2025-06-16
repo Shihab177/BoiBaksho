@@ -8,11 +8,11 @@ import book5 from "../../assets/book/book-5.png";
 import book6 from "../../assets/book/book-6.png";
 import book7 from "../../assets/book/book-7.png";
 import book8 from "../../assets/book/book-8.png";
-const TopBook = () => {
+const TopReviewedBooks = () => {
   return (
     <div className="md:container  mx-auto my-15">
       <h1 className="text-[36px]  font-bold text-gray-700 text-center">
-        Top Book Categories
+        Top Reviewed Books
       </h1>
       <div className="bg-white mt-5 max-h-80 rounded-sm p-5 shadow-md">
         <div className="grid gap-4 md:grid-cols-4 grid-cols-2 ">
@@ -24,7 +24,10 @@ const TopBook = () => {
             <div className=" py-2 px-4 flex items-center w-20 h-25 bg-gray-200">
               <img className="" src={book1} alt="" />
             </div>
-            <p className="hover:text-blue-500"> Qur'an and Tafsir</p>
+            <div>
+              <p className="hover:text-blue-500"> Qur'an and Tafsir</p>
+            <p className='text-yellow-600 font-medium'>Review :42</p>
+            </div>
           </motion.div>
           <motion.div
             whileHover={{ scale: 1.04 }}
@@ -34,9 +37,12 @@ const TopBook = () => {
             <div className=" py-2 px-4 flex items-center w-20 h-25 bg-gray-200">
               <img className="" src={book2} alt="" />
             </div>
-            <p className="hover:text-blue-500">
+            <div>
+              <p className="hover:text-blue-500">
               Marhaba JavaScript e maro thaba
             </p>
+            <p className='text-yellow-600 font-medium'>Review : 40</p>
+            </div>
           </motion.div>
           <motion.div
             whileHover={{ scale: 1.04 }}
@@ -46,7 +52,12 @@ const TopBook = () => {
             <div className=" py-2 px-4 flex items-center w-20 h-25 bg-gray-200">
               <img className="" src={book3} alt="" />
             </div>
-            <p className="hover:text-blue-500">Language Studies and Grammar</p>
+           
+            <div>
+               <p className="hover:text-blue-500">Language Studies and Grammar</p>
+               <p className='text-yellow-600 font-medium'>Review : 39</p>
+            </div>
+            
           </motion.div>
           <motion.div
             whileHover={{ scale: 1.04 }}
@@ -56,10 +67,13 @@ const TopBook = () => {
             <div className=" py-2 px-4 flex items-center w-20 h-25 bg-gray-200">
               <img className="" src={book4} alt="" />
             </div>
-            <p className="hover:text-blue-500">
-              {" "}
+            
+             <div>
+              <p className="hover:text-blue-500">
               Stories for Children and Teens
             </p>
+               <p className='text-yellow-600 font-medium'>Review : 35</p>
+            </div>
           </motion.div>
           <motion.div
             whileHover={{ scale: 1.04 }}
@@ -69,7 +83,10 @@ const TopBook = () => {
             <div className=" py-2 px-4 flex items-center w-20 h-25 bg-gray-200">
               <img className="" src={book5} alt="" />
             </div>
-            <p className="hover:text-blue-500"> Madrasa Books</p>
+           <div>
+             <p className="hover:text-blue-500"> Madrasa Books</p>
+              <p className='text-yellow-600 font-medium'>Review : 31</p>
+           </div>
           </motion.div>
           <motion.div
             whileHover={{ scale: 1.04 }}
@@ -79,7 +96,10 @@ const TopBook = () => {
             <div className=" py-2 px-4 flex items-center w-20 h-25 bg-gray-200">
               <img className="" src={book6} alt="" />
             </div>
-            <p className="hover:text-blue-500">Contemporary Novels</p>
+           <div>
+             <p className="hover:text-blue-500">Contemporary Novels</p>
+            <p className='text-yellow-600 font-medium'>Review : 26</p>
+           </div>
           </motion.div>
           <motion.div
             whileHover={{ scale: 1.04 }}
@@ -89,7 +109,10 @@ const TopBook = () => {
             <div className=" py-2 px-4 flex items-center w-20 h-25 bg-gray-200">
               <img className="" src={book7} alt="" />
             </div>
-            <p className="hover:text-blue-500">Biography of the Prophet</p>
+           <div>
+             <p className="hover:text-blue-500">Biography of the Prophet</p>
+            <p className='text-yellow-600 font-medium'>Review : 26</p>
+           </div>
           </motion.div>
           <motion.div
             whileHover={{ scale: 1.04 }}
@@ -99,7 +122,10 @@ const TopBook = () => {
             <div className=" py-2 px-4 flex items-center w-20 h-25 bg-gray-200">
               <img className="" src={book8} alt="" />
             </div>
-            <p className="hover:text-blue-500">Thriller</p>
+          <div>
+              <p className="hover:text-blue-500">Thriller</p>
+            <p className='text-yellow-600 font-medium'>Review : 21</p>
+          </div>
           </motion.div>
         </div>
       </div>
@@ -107,4 +133,4 @@ const TopBook = () => {
   );
 };
 
-export default TopBook;
+export default TopReviewedBooks;
