@@ -38,11 +38,11 @@ const FeaturedCategories = () => {
   }, []);
   return (
     <div className="md:container mx-auto">
-      <h1 className="text-[36px] font-bold  text-gray-800 text-center">
+      <h1 className="md:text-[36px] text-[28px] font-bold  text-gray-800 text-center">
         Featured Categories
       </h1>
       <div className="bg-white rounded-sm shadow-md p-4 mt-5">
-        <div className="grid md:grid-cols-3 gap-4">
+        <div className="grid lg:grid-cols-3 gap-4">
           <div className="rounded-md bg-[#D9F3DD] max-h-[420px]">
             <h2 className="text-[25px] font-semibold mt-3 text-center">
               Fiction

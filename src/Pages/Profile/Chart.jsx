@@ -48,10 +48,10 @@ const Chart = ({ book }) => {
     <div>
       <div className="md:container bg-white rounded-md shadow-md p-4 mx-auto">
         <div>
-          <h2 className="text-[32px] font-semibold">
+          <h2 className="md:text-[32px] text-[24px] font-semibold">
             <span className="">My </span>Bookshelf Summary
           </h2>
-          <p className="text-[22px] font-semibold">
+          <p className="md:text-[22px] text-[20px] font-semibold">
             Total Books :  {book.length}
           </p>
           <p className="text-[22px] text-center font-semibold">Categories:</p>

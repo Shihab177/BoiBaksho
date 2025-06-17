@@ -35,17 +35,17 @@ const Profile = () => {
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.6 }}
     >
-      <div className="md:container mx-auto p-4 bg-white shadow-md rounded-md my-5 ">
+      <div className="md:container mx-auto p-3 md:p-4 bg-white shadow-md rounded-md my-5 ">
         <h1 className="font-bold text-center  text-[30px]">Profile</h1>
           <div className="flex items-center gap-5">
             <img
-            className="border-gray-300 rounded-full border-3 h-30 w-30"
+            className="border-gray-300 rounded-full border-3 md:h-30 md:w-30 h-20 w-20"
             referrerPolicy="no-referrer"
             src={user?.photoURL}
             alt=""
           />
-          <div className="text-[20px] flex flex-col gap-3  font-semibold">
-            <h1 className="text-[26px] font-bold"> {user?.displayName}</h1>
+          <div className="text-[20px] flex flex-col md:gap-3 gap-1 font-semibold">
+            <h1 className="md:text-[26px] text-[18px] font-bold"> {user?.displayName}</h1>
             <h1 className="text-gray-600 font-bold">{user?.email}</h1>
           </div>
           </div>

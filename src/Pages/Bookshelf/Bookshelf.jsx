@@ -46,18 +46,18 @@ const Bookshelf = () => {
   }
 
   return (
-    <div className="md:container mx-auto my-10">
+    <div className="md:container mx-auto md:my-10 my-4">
       <motion.h1
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.6 }}
-        className="text-[36px] text-center font-bold text-gray-800"
+        className="md:text-[36px] text-[28px] text-center font-bold text-gray-800"
       >
         Browse All Books
       </motion.h1>
 
       {/*  Search and Filter UI */}
-      <div className="flex flex-col md:flex-row  gap-4 justify-center items-center mt-8">
+      <div className="flex flex-col mx-4 md:mx-0 md:flex-row  gap-4 justify-center items-center mt-8">
         
           <input
           type="text"
@@ -85,7 +85,7 @@ const Bookshelf = () => {
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.6 }}
-        className="bg-white mt-5 p-4 max-h-[700px] overflow-y-auto rounded-sm"
+        className="bg-white mt-5 p-4 md:max-h-[700px] max-h-[500px] overflow-y-auto rounded-sm"
       >
         {loading ? (
           <div className="text-center font-semibold text-lg mt-10">
@@ -100,21 +100,21 @@ const Bookshelf = () => {
         )}
 
         {filteredBooks.length > 0 && (
-          <div className="grid md:grid-cols-3 gap-5">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
             {filteredBooks.map((book) => (
               <div
                 key={book._id}
                 className="bg-gray-200 shadow-md rounded-lg p-4 transition hover:shadow-xl"
               >
-                <div className="flex gap-7">
-                  <div className="h-48 w-[133px]">
+                <div className="xl:flex gap-7">
+                  <div className="lg:h-48 mx-auto xl:mx-0 md:w-[133px] h-38 w-[120px]">
                     <img
                       src={book.cover_photo}
                       alt={book.book_title}
                       className="h-full w-full mx-auto rounded mb-3"
                     />
                   </div>
-                  <div className="flex flex-col w-[calc(100%-233px)] gap-2">
+                  <div className="flex flex-col mt-2 md:mt-0 xl:w-[calc(100%-233px)] gap-2">
                     <h2 className="text-xl font-semibold">
                       {book.book_title}
                     </h2>

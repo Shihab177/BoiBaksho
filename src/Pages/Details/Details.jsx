@@ -10,16 +10,18 @@ import { motion } from "framer-motion";
 const Details = () => {
   const [loading, setLoading] = useState(true);
   const [book, setBook] = useState();
-  const [readingStatus, setReadingStatus] = useState(""); 
+  const [readingStatus, setReadingStatus] = useState("");
   const { id } = useParams();
   const { user } = useContext(AuthContext);
 
   useEffect(() => {
-    axios.get(`https://boibaksho-server.vercel.app/details/${id}`).then((data) => {
-      setBook(data.data);
-      setReadingStatus(data.data.reading_status); 
-      setLoading(false);
-    });
+    axios
+      .get(`https://boibaksho-server.vercel.app/details/${id}`)
+      .then((data) => {
+        setBook(data.data);
+        setReadingStatus(data.data.reading_status);
+        setLoading(false);
+      });
   }, [id]);
 
   // Status Update Handler
@@ -34,15 +36,19 @@ const Details = () => {
     }
 
     try {
-      const res = await axios.patch(`https://boibaksho-server.vercel.app/details/${id}`, {
-        reading_status: nextStatus,
-      },{
-         headers: {
-              Authorization: `Bearer ${user.accessToken}`
-            }
-      });
+      const res = await axios.patch(
+        `https://boibaksho-server.vercel.app/details/${id}`,
+        {
+          reading_status: nextStatus,
+        },
+        {
+          headers: {
+            Authorization: `Bearer ${user.accessToken}`,
+          },
+        }
+      );
       if (res.status === 200) {
-        setReadingStatus(nextStatus); 
+        setReadingStatus(nextStatus);
       }
     } catch (error) {
       console.error("Status update failed:", error);
@@ -58,15 +64,15 @@ const Details = () => {
       initial={{ opacity: 0, scale: 0.95 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.6 }}
-      className="max-w-4xl bg-white p-5 rounded-md shadow-md my-7 mx-auto "
+      className="max-w-4xl bg-white p-5 rounded-md shadow-md my-4 md:my-7 mx-auto "
     >
       {loading ? (
         <p className="text-[30px] text-center mt-7 font-semibold">
           Loading Book Details ....
         </p>
       ) : (
-        <div className="flex p-3 gap-5">
-          <div className="bg-gray-200 max-h-[347px] w-[254px] p-2 rounded-md">
+        <div className="md:flex p-3 gap-5">
+          <div className="bg-gray-200 md:h-[400px] md:w-[254px] h-48 w-[174px] md:mx-0 mx-auto p-2 rounded-md">
             <img
               src={book.cover_photo}
               alt={book.book_title}
@@ -75,8 +81,8 @@ const Details = () => {
           </div>
 
           {/* Book Info */}
-          <div className="space-y-3 w-[calc(100%-254px)]">
-            <h2 className="text-3xl font-bold text-gray-800">
+          <div className="space-y-3 mt-4 md:mt-0 md:w-[calc(100%-254px)]">
+            <h2 className="md:text-3xl text-2xl font-bold text-gray-800">
               {book.book_title}
             </h2>
             <p>
@@ -88,9 +94,7 @@ const Details = () => {
               {book?.book_category}
             </p>
             <p>
-              <span className="font-semibold text-gray-700">
-                Total Pages:
-              </span>{" "}
+              <span className="font-semibold text-gray-700">Total Pages:</span>{" "}
               {book?.total_page}
             </p>
 

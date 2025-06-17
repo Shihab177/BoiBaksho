@@ -14,8 +14,8 @@ const TopReviewedBooks = () => {
       <h1 className="text-[36px]  font-bold text-gray-700 text-center">
         Top Reviewed & Upvote Books
       </h1>
-      <div className="bg-white mt-5 max-h-130 rounded-md p-5 shadow-md">
-        <div className="grid gap-4 md:grid-cols-4 grid-cols-2 ">
+      <div className="bg-white mt-5 overflow-y-auto max-h-430 rounded-md p-5 shadow-md">
+        <div className="grid md:gap-4 gap-5 lg:grid-cols-4 md:grid-cols-3 grid-cols-1   ">
           <motion.div
             whileHover={{ scale: 1.04 }}
             whileTap={{ scale: 0.95 }}

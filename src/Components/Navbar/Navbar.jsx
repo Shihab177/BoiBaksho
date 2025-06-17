@@ -28,13 +28,13 @@ const Navbar = () => {
   return (
     <div className="relative">
       <nav className=" py-3 px-2 flex items-center justify-between bg-[#F1E9F7]">
-        <div className="flex w-4/12 gap-6">
-          <img className="w-14 h-14 md:flex hidden" src={logo} alt="Logo" />
-          <button onClick={handelMenu}><CiMenuFries size={23} /></button>
+        <div className="flex lg:w-4/12 md:w-3/12 gap-6">
+          <img className="w-14 h-14 lg:flex hidden" src={logo} alt="Logo" />
+          <button className="md:hidden" onClick={handelMenu}><CiMenuFries size={23} /></button>
           
-          <h1 className="md:text-[38px] text-[20px] font-semibold md:font-bold">BoiBaksho</h1>
+          <h1 className="lg:text-[38px] md:text-[28px] text-[20px] font-semibold md:font-bold">BoiBaksho</h1>
         </div>
-        <div className="w-6/12  md:flex hidden text-[20px] font-semibold justify-between">
+        <div className="lg:w-6/12 md:w-7/12 md:flex hidden md:text-[17px] font-semibold justify-between">
           <NavLink to="/">
             <p>Home</p>
           </NavLink>
@@ -51,11 +51,11 @@ const Navbar = () => {
             <p>Profile </p>
           </NavLink>
         </div>
-        <div className="w-3/12 flex justify-end">
+        <div className="lg:w-3/12 md:w-2/12 flex justify-end">
           {user ? (
             <button
               onClick={handelLogout}
-              className="md:text-[25px] text-[15px] bg-blue-600 rounded-md px-2 py-1 md:px-4 md:py-2 text-white font-bold"
+              className="md:text-[25px] text-[15px] bg-blue-600 rounded-md px-2 py-1 lg:px-4 lg:py-2 text-white font-bold"
             >
               {" "}
               Logout

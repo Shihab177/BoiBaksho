@@ -37,8 +37,8 @@ const AddBook = () => {
     return (
         <motion.div initial={{ opacity: 0, scale: 0.95 }}
       animate={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.6 }} className="md:container mx-auto my-7 ">
-      <h2 className="text-[36px] font-bold mb-4 text-center text-gray-700">Add A New Book</h2>
+      transition={{ duration: 0.6 }} className="md:container mx-auto my-4 md:my-7 ">
+      <h2 className="md:text-[36px] text-[28px] font-bold mb-4 text-center text-gray-700">Add A New Book</h2>
       <form onSubmit={handleSubmit} className="space-y-4 text-[17px] font-semibold p-6 bg-white rounded shadow">
          <div className="grid md:grid-cols-2 md:gap-5">
             <fieldset>

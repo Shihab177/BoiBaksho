@@ -71,11 +71,11 @@ const MyBooks = () => {
       return <Loading></Loading>
     }
     return (
-       <div className="md:container mx-auto my-10">
+       <div className="md:container mx-auto my-4 md:my-10">
    
       <motion.h1 initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.6 }} className="text-[36px] text-center font-bold text-gray-800">
+        transition={{ duration: 0.6 }} className="md:text-[36px] text-[28px] text-center font-bold text-gray-800">
         My added books
       </motion.h1>
 
@@ -101,26 +101,26 @@ const MyBooks = () => {
 
         {
           books && 
-          <div className="grid md:grid-cols-3 max-h-[762px] overflow-y-auto  gap-5">
+          <div className="grid lg:grid-cols-3 md:grid-cols-2 max-h-[600px] md:max-h-[762px] overflow-y-auto  gap-5">
           {books.map((book) => (
             <div
               key={book._id}
               className="bg-gray-200 max-w-[646px] shadow-md rounded-lg p-4 transition hover:shadow-xl"
             >
               <div className="">
-                <div className="h-58 mb-5 mx-auto w-[193px]">
+                <div className="lg:h-58 mb-5 mx-auto md:w-[150px] lg:w-[193px] h-38 w-[120px]">
                   <img
                     src={book.cover_photo}
                     alt={book.book_title}
                     className="h-full w-full mx-auto rounded mb-3"
                   />
                 </div>
-                <div className="flex flex-col w-[calc(100%-233px)] gap-2">
+                <div className="flex flex-col xl:w-[calc(100%-233px)] gap-2">
                   <h2 className="text-xl font-semibold">{book.book_title}</h2>
                   <p className="text-gray-800 font-semibold">
                     Author: {book.book_author}
                   </p>
-                  <p className='text-gray-800 font-semibold'>Pages: {book.total_page}</p>
+                 
                   <p className=" text-gray-700 font-semibold">
                     Category: {book.book_category}
                   </p>
