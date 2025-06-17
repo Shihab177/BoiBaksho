@@ -7,7 +7,7 @@ const PopularBooks = () => {
     const [loading,setLoading]=useState(true)
     const navigate =useNavigate()
     useEffect(()=>{
-        axios.get(`http://localhost:8000/highestupvote/book`)
+        axios.get(`https://boibaksho-server.vercel.app/highestupvote/book`)
         .then(res=>{
             setBook(res.data)
             setLoading(false)
@@ -27,7 +27,7 @@ const PopularBooks = () => {
             <h1 className='text-[36px] font-bold text-gray-800 text-center'>Popular Books</h1>
             <div className="grid md:grid-cols-3 bg-white p-4 rounded-sm mt-5 shadow-md gap-5">
                {
-                 loading ? <p className='text-center font-semibold text-2xl'>Loading books....</p>
+                 loading ? <p className='text-center mt-7 font-semibold text-2xl'>Loading books....</p>
                  :
                  books.map(book=> <div key={book._id} className='bg-gray-200 shadow-md rounded-lg p-4 transition hover:shadow-xl'>
                     <div className="flex gap-7">

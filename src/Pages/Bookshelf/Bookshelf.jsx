@@ -27,7 +27,7 @@ const Bookshelf = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8000/allbooks")
+      .get("https://boibaksho-server.vercel.app/allbooks")
       .then((data) => {
         setBooks(data.data);
         setLoading(false);
@@ -57,7 +57,7 @@ const Bookshelf = () => {
       </motion.h1>
 
       {/*  Search and Filter UI */}
-      <div className="flex flex-col md:flex-row gap-4 justify-center items-center mt-8">
+      <div className="flex flex-col md:flex-row  gap-4 justify-center items-center mt-8">
         
           <input
           type="text"
@@ -85,7 +85,7 @@ const Bookshelf = () => {
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.6 }}
-        className="bg-white mt-5 p-4 rounded-sm"
+        className="bg-white mt-5 p-4 max-h-[700px] overflow-y-auto rounded-sm"
       >
         {loading ? (
           <div className="text-center font-semibold text-lg mt-10">

@@ -40,7 +40,7 @@ const Review = ({ book }) => {
     };
 
     axios
-      .post("http://localhost:8000/review", reviewData,{
+      .post("https://boibaksho-server.vercel.app/review", reviewData,{
         headers: {
               Authorization: `Bearer ${user.accessToken}`
             }
@@ -66,7 +66,7 @@ const Review = ({ book }) => {
   };
   const getReviews = () => {
     axios
-      .get("http://localhost:8000/review")
+      .get("https://boibaksho-server.vercel.app/review")
       .then((res) => {
         setReviews(res.data);
         setLoading(false);

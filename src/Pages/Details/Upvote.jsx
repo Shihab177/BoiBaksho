@@ -22,7 +22,7 @@ const Upvote = ({ book }) => {
       });
     }
 
-    axios.patch(`http://localhost:8000/upvote/${book?._id}`,{},{
+    axios.patch(`https://boibaksho-server.vercel.app/upvote/${book?._id}`,{},{
       headers: {
               Authorization: `Bearer ${user.accessToken}`
             }

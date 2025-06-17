@@ -13,7 +13,7 @@ const AddBook = () => {
         const newBook = Object.fromEntries(fromData.entries());
           newBook.upvote = parseInt(newBook.upvote);
 
-        axios.post ('http://localhost:8000/books',newBook,{
+        axios.post ('https://boibaksho-server.vercel.app/books',newBook,{
            headers: {
               Authorization: `Bearer ${user.accessToken}`
             }

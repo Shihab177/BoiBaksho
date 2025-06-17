@@ -1,4 +1,10 @@
-a.active{
+a.active>p{
     border-bottom: 3px solid blue; 
     
+}
+a.active > h4 {
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-color: blue;
+  text-decoration-thickness: 2px;
 }

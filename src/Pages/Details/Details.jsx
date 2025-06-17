@@ -15,7 +15,7 @@ const Details = () => {
   const { user } = useContext(AuthContext);
 
   useEffect(() => {
-    axios.get(`http://localhost:8000/details/${id}`).then((data) => {
+    axios.get(`https://boibaksho-server.vercel.app/details/${id}`).then((data) => {
       setBook(data.data);
       setReadingStatus(data.data.reading_status); 
       setLoading(false);
@@ -34,7 +34,7 @@ const Details = () => {
     }
 
     try {
-      const res = await axios.patch(`http://localhost:8000/details/${id}`, {
+      const res = await axios.patch(`https://boibaksho-server.vercel.app/details/${id}`, {
         reading_status: nextStatus,
       },{
          headers: {

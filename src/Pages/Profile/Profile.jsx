@@ -13,7 +13,7 @@ const Profile = () => {
   useEffect(() => {
     if (user) {
       axios
-        .get(`http://localhost:8000/books?email=${user?.email}`,{
+        .get(`https://boibaksho-server.vercel.app/books?email=${user?.email}`,{
             headers: {
               Authorization: `Bearer ${user.accessToken}`
             }})

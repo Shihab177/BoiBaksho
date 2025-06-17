@@ -9,7 +9,7 @@ const FeaturedCategories = () => {
   const [fantasyBook, setFantasyBook] = useState([]);
   useEffect(() => {
     axios
-      .get("http://localhost:8000/fiction/book")
+      .get("https://boibaksho-server.vercel.app/fiction/book")
       .then((res) => {
         setFictionBook(res.data);
         setLoading(false);
@@ -19,7 +19,7 @@ const FeaturedCategories = () => {
       });
 
     axios
-      .get("http://localhost:8000/nonfiction/book")
+      .get("https://boibaksho-server.vercel.app/nonfiction/book")
       .then((res) => {
         setNonFictionBook(res.data);
       })
@@ -28,7 +28,7 @@ const FeaturedCategories = () => {
       });
 
     axios
-      .get("http://localhost:8000/fantasty/book")
+      .get("https://boibaksho-server.vercel.app/fantasty/book")
       .then((res) => {
         setFantasyBook(res.data);
       })

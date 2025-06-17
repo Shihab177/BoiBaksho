@@ -15,7 +15,7 @@ const MyBooks = () => {
 
     useEffect(()=>{
         if(user){
-          axios.get(`http://localhost:8000/books?email=${user?.email}`,{
+          axios.get(`https://boibaksho-server.vercel.app/books?email=${user?.email}`,{
             headers: {
               Authorization: `Bearer ${user.accessToken}`
             }
@@ -43,7 +43,7 @@ const MyBooks = () => {
     confirmButtonText: 'Yes, delete it!'
   }).then((result) => {
     if (result.isConfirmed) {
-      axios.delete(`http://localhost:8000/mybook/${id}`,{
+      axios.delete(`https://boibaksho-server.vercel.app/mybook/${id}`,{
             headers: {
               Authorization: `Bearer ${user.accessToken}`
             }})
@@ -129,8 +129,9 @@ const MyBooks = () => {
                    
                     Upvotes: {book.upvote}
                   </p>
-                  <p className='text-gray-700 font-semibold'>Overview: {book.book_overview}</p>
+                 
                 </div>
+                 <p className='text-gray-700 font-semibold'>Overview: {book.book_overview}</p>
               </div>
               <div className="flex mt-6 gap-6">
                 <button  onClick={()=>navigate(`/bookUpdate/${book?._id}`)} className='text-[20px] font-semibold px-4 py-2 text-white rounded-sm bg-blue-500 hover:bg-blue-700'>Update</button>

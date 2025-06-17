@@ -11,7 +11,7 @@ const BookUpdate = () => {
   const { id } = useParams();
   console.log(id);
   useEffect(() => {
-    axios.get(`http://localhost:8000/Updatebook/${id}`,{
+    axios.get(`https://boibaksho-server.vercel.app/Updatebook/${id}`,{
       headers: {
               Authorization: `Bearer ${user.accessToken}`
             }
@@ -27,7 +27,7 @@ const BookUpdate = () => {
     updateBook.upvote = parseInt(updateBook.upvote);
 
     axios
-      .patch(`http://localhost:8000/updatebook/${id}`, updateBook,{
+      .patch(`https://boibaksho-server.vercel.app/updatebook/${id}`, updateBook,{
           headers: {
               Authorization: `Bearer ${user.accessToken}`
             }

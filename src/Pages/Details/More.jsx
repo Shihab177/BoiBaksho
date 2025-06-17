@@ -18,7 +18,7 @@ console.log(review)
      const updatedReview = inputRef.current.value;
     document.getElementById("my_modal_5").close();
 
-    axios.patch(`http://localhost:8000/review/${review?._id}`,{updatedReview},{
+    axios.patch(`https://boibaksho-server.vercel.app/review/${review?._id}`,{updatedReview},{
       headers: {
               Authorization: `Bearer ${user.accessToken}`
             }
@@ -44,7 +44,7 @@ console.log(review)
     
   };
   const handleDelete = ()=>{
-    axios.delete(`http://localhost:8000/review/${review?._id}`,{
+    axios.delete(`https://boibaksho-server.vercel.app/review/${review?._id}`,{
        headers: {
               Authorization: `Bearer ${user.accessToken}`
             }
