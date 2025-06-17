@@ -46,7 +46,7 @@ const Bookshelf = () => {
   }
 
   return (
-    <div className="md:container mx-auto md:my-10 my-4">
+    <div className="md:container mt-[55px] md:mt-[81px] mx-auto md:mb-10 my-4">
       <motion.h1
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
@@ -85,7 +85,7 @@ const Bookshelf = () => {
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.6 }}
-        className="bg-white mt-5 p-4 md:max-h-[700px] max-h-[500px] overflow-y-auto rounded-sm"
+        className="bg-white mt-5 p-4 md:max-h-[700px]  max-h-[500px] overflow-y-auto rounded-sm"
       >
         {loading ? (
           <div className="text-center font-semibold text-lg mt-10">

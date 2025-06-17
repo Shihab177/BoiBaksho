@@ -64,7 +64,7 @@ const Details = () => {
       initial={{ opacity: 0, scale: 0.95 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.6 }}
-      className="max-w-4xl bg-white p-5 rounded-md shadow-md my-4 md:my-7 mx-auto "
+      className="max-w-4xl bg-white p-5 rounded-md shadow-md my-4 mt-[81px] md:mb-7 mx-auto "
     >
       {loading ? (
         <p className="text-[30px] text-center mt-7 font-semibold">

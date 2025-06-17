@@ -71,7 +71,7 @@ const MyBooks = () => {
       return <Loading></Loading>
     }
     return (
-       <div className="md:container mx-auto my-4 md:my-10">
+       <div className="md:container mx-auto my-4 mt-[55px] md:mt-[81px] md:mb-10">
    
       <motion.h1 initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}

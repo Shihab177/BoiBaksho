@@ -71,7 +71,7 @@ const Login = () => {
       initial={{ opacity: 0, scale: 0.95 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.6 }}
-      className="mb-6"
+      className="mb-6 mt-[59px] md:mt-[92px]"
     >
       <div className="">
         <div className=" md:max-w-md  p-2 mx-2 rounded-md border border-gray-300   sm:p-8 md:mx-auto mt-9 bg-[#F6F6F6] shadow-md dark:bg-gray-50 dark:text-gray-800">

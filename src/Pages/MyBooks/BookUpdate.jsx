@@ -60,7 +60,7 @@ const BookUpdate = () => {
       initial={{ opacity: 0, scale: 0.95 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.6 }}
-      className="md:container mx-auto my-7 "
+      className="md:container mt-[50px] md:mt-[81px] mx-auto my-7 "
     >
       <h2 className="text-[36px] font-bold mb-4 text-center text-gray-700">
         Update Your Book
