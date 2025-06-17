@@ -10,16 +10,16 @@ import book7 from "../../assets/book/book-7.png";
 import book8 from "../../assets/book/book-8.png";
 const TopReviewedBooks = () => {
   return (
-    <div className="md:container  mx-auto my-15">
+    <div className="md:container rounded-md  mx-auto my-15">
       <h1 className="text-[36px]  font-bold text-gray-700 text-center">
         Top Reviewed & Upvote Books
       </h1>
-      <div className="bg-white mt-5 max-h-130 rounded-sm p-5 shadow-md">
+      <div className="bg-white mt-5 max-h-130 rounded-md p-5 shadow-md">
         <div className="grid gap-4 md:grid-cols-4 grid-cols-2 ">
           <motion.div
             whileHover={{ scale: 1.04 }}
             whileTap={{ scale: 0.95 }}
-            className="border flex items-center gap-2 text-[18px] font-semibold border-gray-200 shadow-md rounded-md "
+            className="border flex items-center gap-2  text-[18px] font-semibold border-gray-200 shadow-md rounded-md "
           >
             <div className=" py-2 px-4 flex items-center w-20 h-25 bg-gray-200">
               <img className="" src={book1} alt="" />

@@ -47,7 +47,7 @@ const FeaturedCategories = () => {
             <h2 className="text-[25px] font-semibold mt-3 text-center">
               Fiction
             </h2>
-            <hr className="border border-dashed border-purple-700" />
+            <hr className="border border-solid border-gray-700" />
             <div className="max-h-[340px] p-3 overflow-y-auto">
               {loading ? (
               <p className="font-semibold text-[20px] mt-5 text-center">
@@ -78,7 +78,7 @@ const FeaturedCategories = () => {
             <h2 className="text-[25px] font-semibold mt-3 text-center">
               Non-Fiction
             </h2>
-            <hr className="border border-dashed border-purple-700" />
+            <hr className="border border-solid border-gray-700" />
             <div className="max-h-[340px] p-3 overflow-y-auto">
               {loading ? (
               <p className="font-semibold text-[20px] mt-5 text-center">
@@ -110,7 +110,7 @@ const FeaturedCategories = () => {
             <h2 className="text-[25px] font-semibold mt-3 text-center">
               Fantasy
             </h2> 
-            <hr className="border border-dashed border-purple-700" />
+            <hr className="border border-solid border-gray-700" />
             <div className="max-h-[340px] p-3 overflow-y-auto">
               {loading ? (
               <p className="font-semibold text-[20px] mt-5 text-center">

@@ -4,6 +4,7 @@ import axios from 'axios';
 import {AuthContext} from '../../Provider/AuthProvider'
 import Swal from 'sweetalert2';
 import { useNavigate } from 'react-router';
+import Loading from '../../Components/loading/Loading';
 const MyBooks = () => {
   const navigate = useNavigate()
   const [refresh, setRefresh] = useState(false);
@@ -62,6 +63,9 @@ const MyBooks = () => {
     }
   });//
       
+    }
+    if(loading){
+      return <Loading></Loading>
     }
     return (
        <div className="md:container mx-auto my-10">

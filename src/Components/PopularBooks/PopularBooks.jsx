@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router';
-
+import { motion } from 'framer-motion';
 const PopularBooks = () => {
     const [books,setBook]=useState([])
     const [loading,setLoading]=useState(true)
@@ -21,7 +21,9 @@ const PopularBooks = () => {
     } 
     console.log(books)
     return (
-        <div className='md:container mx-auto my-15'>
+        <motion.div initial={{ opacity: 0, scale: 0.95 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.6 }} className='md:container mx-auto my-15'>
             <h1 className='text-[36px] font-bold text-gray-800 text-center'>Popular Books</h1>
             <div className="grid md:grid-cols-3 bg-white p-4 rounded-sm mt-5 shadow-md gap-5">
                {
@@ -55,7 +57,7 @@ const PopularBooks = () => {
                }
                
             </div>
-        </div>
+        </motion.div>
     );
 };
 

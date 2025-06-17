@@ -4,7 +4,9 @@ import Swal from "sweetalert2";
 import { motion } from "framer-motion";
 import Chart from "./Chart";
 import axios from "axios";
+import Loading from "../../Components/loading/Loading";
 const Profile = () => {
+  const [loading,setLoading]=useState(true)
   const [book, setBook] = useState([]);
   const { user } = use(AuthContext);
   console.log(user);
@@ -17,9 +19,14 @@ const Profile = () => {
             }})
         .then((res) => {
           setBook(res.data);
+          setLoading(false)
         });
     }
   }, [user]);
+
+  if(loading){
+    return <Loading></Loading>
+  }
 
   return (
     <motion.div
