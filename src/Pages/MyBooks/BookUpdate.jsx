@@ -1,18 +1,24 @@
 import axios from "axios";
-import React, { useEffect, useState } from "react";
+import React, { use, useEffect, useState } from "react";
 import Swal from "sweetalert2";
 import { motion } from "framer-motion";
 import { useNavigate, useParams } from "react-router";
+import { AuthContext } from "../../Provider/AuthProvider";
 const BookUpdate = () => {
+  const {user}=use(AuthContext)
     const navigate =useNavigate()
   const [book, setBooks] = useState([]);
   const { id } = useParams();
   console.log(id);
   useEffect(() => {
-    axios.get(`http://localhost:8000/Updatebook/${id}`).then((res) => {
+    axios.get(`http://localhost:8000/Updatebook/${id}`,{
+      headers: {
+              Authorization: `Bearer ${user.accessToken}`
+            }
+    }).then((res) => {
       setBooks(res.data);
     });
-  }, [id]);
+  }, [id,user]);
   const handleSubmit = (e) => {
     e.preventDefault();
     const from = e.target;
@@ -21,7 +27,11 @@ const BookUpdate = () => {
     updateBook.upvote = parseInt(updateBook.upvote);
 
     axios
-      .patch(`http://localhost:8000/updatebook/${id}`, updateBook)
+      .patch(`http://localhost:8000/updatebook/${id}`, updateBook,{
+          headers: {
+              Authorization: `Bearer ${user.accessToken}`
+            }
+      })
       .then((data) => {
         console.log(data.data)
         if (data.data.modifiedCount) {

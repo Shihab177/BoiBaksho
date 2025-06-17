@@ -36,6 +36,10 @@ const Details = () => {
     try {
       const res = await axios.patch(`http://localhost:8000/details/${id}`, {
         reading_status: nextStatus,
+      },{
+         headers: {
+              Authorization: `Bearer ${user.accessToken}`
+            }
       });
       if (res.status === 200) {
         setReadingStatus(nextStatus); 

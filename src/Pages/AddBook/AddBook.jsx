@@ -13,7 +13,11 @@ const AddBook = () => {
         const newBook = Object.fromEntries(fromData.entries());
           newBook.upvote = parseInt(newBook.upvote);
 
-        axios.post ('http://localhost:8000/books',newBook)
+        axios.post ('http://localhost:8000/books',newBook,{
+           headers: {
+              Authorization: `Bearer ${user.accessToken}`
+            }
+        })
         .then(data=>{
               if (data?.data.insertedId) {
           Swal.fire({

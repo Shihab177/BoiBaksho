@@ -1,10 +1,12 @@
 import axios from "axios";
-import React, { useRef } from "react";
+import React, { use, useRef } from "react";
 import { FaEdit } from "react-icons/fa";
 import { MdDelete } from "react-icons/md";
 import Swal from "sweetalert2";
+import { AuthContext } from "../../Provider/AuthProvider";
 
 const More = ({ review,onUpdate }) => {
+  const {user}=use(AuthContext)
   const inputRef = useRef();
 console.log(review)
   const handleEditBtn = () => {
@@ -16,7 +18,11 @@ console.log(review)
      const updatedReview = inputRef.current.value;
     document.getElementById("my_modal_5").close();
 
-    axios.patch(`http://localhost:8000/review/${review?._id}`,{updatedReview})
+    axios.patch(`http://localhost:8000/review/${review?._id}`,{updatedReview},{
+      headers: {
+              Authorization: `Bearer ${user.accessToken}`
+            }
+    })
     .then(data=>{
         console.log(data.data)
        if(data.data.modifiedCount){
@@ -38,7 +44,11 @@ console.log(review)
     
   };
   const handleDelete = ()=>{
-    axios.delete(`http://localhost:8000/review/${review?._id}`)
+    axios.delete(`http://localhost:8000/review/${review?._id}`,{
+       headers: {
+              Authorization: `Bearer ${user.accessToken}`
+            }
+    })
     .then(data=>{
       console.log(data.data)
      onUpdate()

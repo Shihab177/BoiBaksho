@@ -40,7 +40,11 @@ const Review = ({ book }) => {
     };
 
     axios
-      .post("http://localhost:8000/review", reviewData)
+      .post("http://localhost:8000/review", reviewData,{
+        headers: {
+              Authorization: `Bearer ${user.accessToken}`
+            }
+      })
       .then((data) => {
         console.log(data.data);
         if (data.data.insertedId) {

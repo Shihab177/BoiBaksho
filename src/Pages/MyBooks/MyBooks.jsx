@@ -43,7 +43,10 @@ const MyBooks = () => {
     confirmButtonText: 'Yes, delete it!'
   }).then((result) => {
     if (result.isConfirmed) {
-      axios.delete(`http://localhost:8000/mybook/${id}`)
+      axios.delete(`http://localhost:8000/mybook/${id}`,{
+            headers: {
+              Authorization: `Bearer ${user.accessToken}`
+            }})
       .then(res=>{
         console.log(res.data)
         if (res.data.deletedCount > 0) {
