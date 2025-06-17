@@ -4,10 +4,12 @@ import Swal from "sweetalert2";
 import { motion } from "framer-motion";
 import { useNavigate, useParams } from "react-router";
 import { AuthContext } from "../../Provider/AuthProvider";
+import Loading from "../../Components/loading/Loading";
 const BookUpdate = () => {
   const {user}=use(AuthContext)
     const navigate =useNavigate()
   const [book, setBooks] = useState([]);
+  const [loading,setLoading]=useState(true)
   const { id } = useParams();
   console.log(id);
   useEffect(() => {
@@ -17,6 +19,7 @@ const BookUpdate = () => {
             }
     }).then((res) => {
       setBooks(res.data);
+      setLoading(false)
     });
   }, [id,user]);
   const handleSubmit = (e) => {
@@ -50,6 +53,9 @@ const BookUpdate = () => {
         console.log(error);
       });
   };
+   if(loading){
+    return <Loading></Loading>
+   }
   if (!book || !book.book_title) {
     return (
       <div className="text-center  mt-10 font-bold">Loading book data...</div>

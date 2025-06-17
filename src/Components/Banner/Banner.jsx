@@ -23,7 +23,7 @@ const Banner = () => {
         <SwiperSlide className=''>
            
             <div className=' rounded-br-md rounded-bl-md items-center bg-no-repeat bg-cover bg-center'  style={{ backgroundImage: `url(${slider2})` }}>
-            <div className=" flex flex-col text-left text-white pt-13 md:pt-28  rounded-bl-md mx-13">
+            <div className=" flex flex-col text-left text-white pt-13 md:pt-28  rounded-bl-md mx-13 md:ml-26">
              <h1 className='md:text-[40px] text- text-[17px] font-bold'>Discover Your Next Favorite <br /> Book</h1>
              <p className='md:mt-4 mt-2 md:text-[20px] text-[11px] font-medium'>Explore a world of stories, from fantasy to non-fiction.</p>
              <Link to={"/Bookshelf"}><button className='md:px-5  md:py-3 px-3 py-2 mt-2 bg-blue-600 text-white hover:bg-blue-700 md:text-2xl text-[12px]  font-semibold mt-1 rounded-4xl'>Explore Now</button></Link>
@@ -35,7 +35,7 @@ const Banner = () => {
         <SwiperSlide className=''>
            
             <div className=' rounded-br-md rounded-bl-md items-center bg-no-repeat bg-cover bg-center'  style={{ backgroundImage: `url(${slider3})` }}>
-            <div className="text-left flex flex-col text-white pt-13 md:pt-28  rounded-bl-md mx-13">
+            <div className="text-left flex flex-col text-white pt-13 md:pt-28  rounded-bl-md mx-13 md:ml-26">
              <h1 className='md:text-[40px] text- text-[17px] text-white font-bold'>Discover and Share Great <br /> Books</h1>
              <p className='md:mt-4 mt-2 md:text-[20px] text-[11px] font-medium'>Read community reviews and upvote your favorites. <br /> Help others find the next great read</p>
              <Link to={"/Bookshelf"}><button className='md:px-5  md:py-3 px-3 py-2 bg-blue-600 text-white hover:bg-blue-700 md:text-2xl text-[12px]  font-semibold mt-1 rounded-4xl'>Explore Now</button></Link>
@@ -47,7 +47,7 @@ const Banner = () => {
         <SwiperSlide className=''>
            
             <div className=' rounded-br-md rounded-bl-md items-center bg-no-repeat bg-cover bg-center'  style={{ backgroundImage: `url(${slider4})` }}>
-            <div className="text-left flex flex-col text-white py-16 md:pt-28  rounded-bl-md mx-13">
+            <div className="text-left flex flex-col text-white py-16 md:pt-28  rounded-bl-md mx-13 md:ml-26">
              <h1 className='md:text-[40px] text- text-[17px] font-bold'>Track Your Reading Progress</h1>
              <p className='md:mt-4 mt-2 md:text-[20px] text-[11px] font-medium'>Stay motivated with visual progress tracking and <br /> reach your reading goals faster.</p>
              <Link to={"/Bookshelf"}><button className='md:px-5  md:py-3 px-3 py-2 bg-blue-600 text-white hover:bg-blue-700 md:text-2xl text-[12px]  font-semibold mt-1 rounded-4xl'>Explore Now</button></Link>

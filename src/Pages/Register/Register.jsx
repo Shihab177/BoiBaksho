@@ -1,6 +1,6 @@
 import React, { use } from "react";
 import { Link, useNavigate } from "react-router";
-
+import { motion } from "framer-motion";
 import Swal from "sweetalert2";
 import { AuthContext } from "../../Provider/AuthProvider";
 
@@ -100,7 +100,9 @@ const Register = () => {
       });
   };
   return (
-    <div className="md:mt-[92px] mt-[58px]">
+    <motion.div initial={{ opacity: 0, scale: 0.95 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.6 }} className="md:mt-[92px] mt-[58px]">
       <div className="w-[360px] md:w-[500px] p-4  mb-6 rounded-md border border-gray-300  sm:p-8 mx-auto mt-9  bg-[#F6F6F6] shadow-md dark:bg-gray-50 dark:text-gray-800">
         <h2 className="mb-3 text-3xl font-semibold text-center">
           Register your account
@@ -200,7 +202,7 @@ const Register = () => {
           </Link>
         </p>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
