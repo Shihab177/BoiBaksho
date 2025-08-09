@@ -8,7 +8,7 @@ BoiBaksho is a digital bookshelf web application where users can manage their re
 
 ##  Live URL
 
-🔗 [https://boibaksho.vercel.app](https://boibaksho.vercel.app)  
+🔗 [https://boibaksho-e735b.web.app/]  
 > _(Replace with your actual live link)_
 
 ---
