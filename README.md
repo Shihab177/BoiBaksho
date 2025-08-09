@@ -44,3 +44,10 @@ BoiBaksho is a digital bookshelf web application where users can manage their re
 - jsonwebtoken *(if JWT used)*
 
 ---
+# 🚀 How to Run Locally
+
+1. Clone the repo  
+   ```bash
+   git clone https://github.com/Shihab177/BoiBaksho.git
+   cd boibaksho-cliant
+   npm run dev
