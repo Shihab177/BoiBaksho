@@ -26,12 +26,12 @@ const PopularBooks = () => {
       initial={{ opacity: 0, scale: 0.95 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.6 }}
-      className="md:container mx-auto my-8 md:my-15"
+      className="md:container mx-auto my-8 md:mt-15"
     >
       <h1 className="md:text-[36px] text-[28px] font-bold text-gray-800 text-center">
         Popular Books
       </h1>
-      <div className="grid lg:grid-cols-3 md:grid-cols-2 bg-white p-4 rounded-sm mt-5 shadow-md gap-5">
+      <div className="grid lg:grid-cols-3 md:grid-cols-2  rounded-sm mt-5  gap-5">
         {loading ? (
           <p className="text-center mt-7 font-semibold text-2xl">
             Loading books....
@@ -40,7 +40,7 @@ const PopularBooks = () => {
           books.map((book) => (
             <div
               key={book._id}
-              className="bg-gray-200 shadow-md rounded-lg p-4 transition hover:shadow-xl"
+              className="bg-white shadow-md rounded-lg p-4 transition hover:shadow-xl"
             >
               <div className="xl:flex  gap-7">
                 <div className="lg:h-48 xl:mx-0 mx-auto lg:w-[133px] h-38 w-[120px]">
@@ -65,7 +65,7 @@ const PopularBooks = () => {
               </div>
               <button
                 onClick={() => handelDetails(book._id)}
-                className="text-[24px]  font-semibold py-2 text-white bg-blue-500 hover:bg-blue-700 w-full rounded-2xl mt-6"
+                className="text-[20px]  font-semibold py-2 text-white bg-[#2198D4] hover:bg-[#26AAED] w-full rounded-2xl mt-6"
               >
                 Details
               </button>
