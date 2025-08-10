@@ -103,8 +103,8 @@ const Register = () => {
     <motion.div initial={{ opacity: 0, scale: 0.95 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.6 }} className="md:mt-[92px] mt-[58px]">
-      <div className="w-[360px] md:w-[500px] p-4  mb-6 rounded-md border border-gray-300  sm:p-8 mx-auto mt-9  bg-[#F6F6F6] shadow-md dark:bg-gray-50 dark:text-gray-800">
-        <h2 className="mb-3 text-3xl font-semibold text-center">
+      <div className="w-[360px] md:w-[500px] p-4  mb-6 rounded-md  sm:p-8 mx-auto mt-9 dark:bg-gray-50 dark:text-gray-800">
+        <h2 className="mb-3 text-2xl md:text-4xl font-semibold text-center">
           Register your account
         </h2>
         <div className="my-6 space-y-4">
@@ -112,7 +112,7 @@ const Register = () => {
             onClick={handelGoogleLogin}
             aria-label="Login with Google"
             type="button"
-            className="flex w-full items-center justify-center  p-4 space-x-4 border rounded-md focus:ring-2 focus:ring-offset-1 dark:border-gray-600 bg-blue-600 text-white hover:bg-blue-700"
+            className="flex w-full items-center justify-center text-base md:text-xl  p-4 space-x-4 border rounded-md focus:ring-2 focus:ring-offset-1 dark:border-gray-600 text-white bg-[#2198D4] hover:bg-[#26AAED]"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -132,7 +132,7 @@ const Register = () => {
         <form onSubmit={handelRegister} className="space-y-8 ">
           <div className="space-y-4">
             <div className="space-y-2">
-              <label className="block text-sm">Name</label>
+              <label className="text-[16px] font-semibold md:text-[18px]">Name</label>
               <input
                 type="text"
                 name="name"
@@ -141,7 +141,7 @@ const Register = () => {
               />
             </div>
             <div className="space-y-2">
-              <label className="block text-sm">Photo URL</label>
+              <label className="text-[16px] font-semibold md:text-[18px]">Photo URL</label>
               <input
                 type="text"
                 name="photo"
@@ -150,7 +150,7 @@ const Register = () => {
               />
             </div>
             <div className="space-y-2">
-              <label htmlFor="email" className="block text-[16px]">
+              <label htmlFor="email" className="text-[16px] font-semibold md:text-[18px]">
                 Email address
               </label>
               <input
@@ -164,7 +164,7 @@ const Register = () => {
             </div>
             <div className="space-y-2">
               <div className="">
-                <label htmlFor="password" className="text-[16px]">
+                <label htmlFor="password" className="text-[16px] font-semibold md:text-[18px]">
                   Password
                 </label>
                 <input
@@ -187,12 +187,12 @@ const Register = () => {
           </div>
           <button
             type="submit"
-            className="w-full px-8 py-3 font-semibold rounded-md bg-blue-600 text-white hover:bg-blue-700"
+            className="w-full px-8 py-3 text-base md:text-xl font-semibold rounded-md bg-[#2198D4] hover:bg-[#26AAED] text-white"
           >
             Register
           </button>
         </form>
-        <p className="text-[19px] mt-5 text-center sm:px-6 dark:text-gray-600">
+        <p className="text-base md:text-xl  mt-5 text-center sm:px-6 dark:text-gray-600 font-semibold">
           Already have an account?
           <Link
             to={"/Auth/login"}

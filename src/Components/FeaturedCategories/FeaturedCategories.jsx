@@ -37,18 +37,18 @@ const FeaturedCategories = () => {
       });
   }, []);
   return (
-    <div className="md:container mx-auto">
-      <h1 className="md:text-[36px] text-[28px] font-bold  text-gray-800 text-center">
+    <div className="md:container md:mt-15 mt-7 mx-2 md:mx-auto">
+      <h1 className="md:text-[36px] text-[28px] font-bold  text-gray-700 text-center">
         Featured Categories
       </h1>
-      <div className="bg-white rounded-sm shadow-md p-4 mt-5">
+      <div className=" rounded-sm  mt-5">
         <div className="grid lg:grid-cols-3 gap-4">
-          <div className="rounded-md bg-[#D9F3DD] max-h-[420px]">
+          <div className="rounded-md bg-[#D9F3DD] border-2 border-[#BEEBC3] shadow-sm max-h-[444px]">
             <h2 className="text-[25px] font-semibold mt-3 text-center">
               Fiction
             </h2>
-            <hr className="border border-solid border-gray-700" />
-            <div className="max-h-[340px] p-3 overflow-y-auto">
+           
+            <div className="max-h-[340px] px-3 overflow-y-auto mt-4 mb-6 ">
               {loading ? (
               <p className="font-semibold text-[20px] mt-5 text-center">
                 Loading....
@@ -74,12 +74,12 @@ const FeaturedCategories = () => {
             )}
             </div>
           </div>
-          <div className="rounded-md bg-[#EDF2FA]  max-h-[420px]">
+          <div className="rounded-md bg-[#EDF2FA]  max-h-[444px]">
             <h2 className="text-[25px] font-semibold mt-3 text-center">
               Non-Fiction
             </h2>
-            <hr className="border border-solid border-gray-700" />
-            <div className="max-h-[340px] p-3 overflow-y-auto">
+           
+            <div className="max-h-[340px] px-3 overflow-y-auto mt-4 mb-6">
               {loading ? (
               <p className="font-semibold text-[20px] mt-5 text-center">
                 Loading....
@@ -106,12 +106,12 @@ const FeaturedCategories = () => {
             </div>
           </div>
           
-          <div className="rounded-md bg-[#D4E8EE] max-h-[420px]">
+          <div className="rounded-md bg-[#D4E8EE] max-h-[444px]">
             <h2 className="text-[25px] font-semibold mt-3 text-center">
               Fantasy
             </h2> 
-            <hr className="border border-solid border-gray-700" />
-            <div className="max-h-[340px] p-3 overflow-y-auto">
+           
+            <div className="max-h-[340px] px-3 overflow-y-auto mt-4 mb-6">
               {loading ? (
               <p className="font-semibold text-[20px] mt-5 text-center">
                 Loading....

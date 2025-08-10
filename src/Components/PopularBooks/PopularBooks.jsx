@@ -26,9 +26,9 @@ const PopularBooks = () => {
       initial={{ opacity: 0, scale: 0.95 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.6 }}
-      className="md:container mx-auto my-8 md:mt-15"
+      className="md:container md:mx-auto my-8 md:mt-15 mx-2"
     >
-      <h1 className="md:text-[36px] text-[28px] font-bold text-gray-800 text-center">
+      <h1 className="md:text-[36px] text-[28px] font-bold text-gray-700 text-center">
         Popular Books
       </h1>
       <div className="grid lg:grid-cols-3 md:grid-cols-2  rounded-sm mt-5  gap-5">

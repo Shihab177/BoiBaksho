@@ -1,4 +1,4 @@
-import React, { use } from "react";
+import React from "react";
 
 import { motion } from "framer-motion";
 import { AuthContext } from "../../Provider/AuthProvider";
@@ -7,9 +7,8 @@ import { Link, useLocation, useNavigate } from "react-router";
 
 const Login = () => {
   const location = useLocation();
-  console.log(location);
   const navigate = useNavigate();
-  const { loginWithGoogle, loginWithEmailPassword } = use(AuthContext);
+  const { loginWithGoogle, loginWithEmailPassword } = React.useContext(AuthContext);
 
   const handelGoogleLogin = () => {
     loginWithGoogle()
@@ -20,13 +19,11 @@ const Login = () => {
           title: "Login Successful",
           showConfirmButton: false,
           timer: 1500,
-        })
-          navigate(`${location.state ? location.state : "/"}`);
-        
+        });
+        navigate(`${location.state ? location.state : "/"}`);
       })
       .catch((error) => {
         const errorMessage = error.message;
-
         Swal.fire({
           position: "center",
           icon: "error",
@@ -50,11 +47,9 @@ const Login = () => {
           title: "Login Successful",
           showConfirmButton: false,
           timer: 1500,
-        })
-           form.reset();
-          navigate(`${location.state ? location.state : "/"}`);
-        
-       
+        });
+        form.reset();
+        navigate(`${location.state ? location.state : "/"}`);
       })
       .catch((error) => {
         const errorMessage = error.message;
@@ -71,11 +66,11 @@ const Login = () => {
       initial={{ opacity: 0, scale: 0.95 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.6 }}
-      className="mb-6 mt-[59px] md:mt-[92px]"
+      className="pb-8 mt-[59px] md:mt-[92px]"
     >
-      <div className="">
-        <div className=" md:max-w-md  p-2 mx-2 rounded-md border border-gray-300   sm:p-8 md:mx-auto mt-9 bg-[#F6F6F6] shadow-md dark:bg-gray-50 dark:text-gray-800">
-          <h2 className="mb-3 text-3xl font-semibold text-center">
+      <div>
+        <div className="md:max-w-md p-2 mx-2 rounded-md sm:p-8 md:mx-auto mt-9 dark:bg-gray-50 dark:text-gray-800 ">
+          <h2 className="mb-3 text-2xl md:text-4xl font-semibold text-center">
             Login to your account
           </h2>
           <div className="my-6 space-y-4">
@@ -83,7 +78,7 @@ const Login = () => {
               onClick={handelGoogleLogin}
               aria-label="Login with Google"
               type="button"
-              className="flex items-center justify-center w-full p-4 space-x-4 border rounded-md focus:ring-2 focus:ring-offset-1 dark:border-gray-600 text-white bg-blue-600 hover:bg-blue-700"
+              className="flex items-center justify-center w-full p-4 space-x-4 border rounded-md focus:ring-2 focus:ring-offset-1 dark:border-gray-600 bg-[#2198D4] hover:bg-[#26AAED] text-white text-base md:text-2xl"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -97,13 +92,13 @@ const Login = () => {
           </div>
           <div className="flex items-center w-full my-4">
             <hr className="w-full dark:text-gray-600" />
-            <p className="px-3 dark:text-gray-600">OR</p>
+            <p className="px-3 dark:text-gray-600 text-sm md:text-lg">OR</p>
             <hr className="w-full dark:text-gray-600" />
           </div>
           <form onSubmit={handelLogin} className="space-y-8">
             <div className="space-y-4">
               <div className="space-y-2">
-                <label htmlFor="email" className="block text-[16px]">
+                <label htmlFor="email" className="block text-[16px] font-semibold md:text-[18px]">
                   Email address
                 </label>
                 <input
@@ -116,7 +111,7 @@ const Login = () => {
               </div>
               <div className="space-y-2">
                 <div className="flex justify-between">
-                  <label htmlFor="password" className="text-[16px]">
+                  <label htmlFor="password" className="text-[16px] font-semibold md:text-[18px]">
                     Password
                   </label>
                 </div>
@@ -127,19 +122,19 @@ const Login = () => {
                   placeholder="*****"
                   className="w-full px-3 py-2 border rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600"
                 />
-                <p className="text-[16px] hover:underline text-blue-600">
+                <p className="text-sm md:text-lg hover:underline text-blue-600 cursor-pointer">
                   Forgot password?
                 </p>
               </div>
             </div>
             <button
               type="submit"
-              className="w-full px-8 py-3 font-semibold rounded-md bg-blue-600 text-white hover:bg-blue-700"
+              className="w-full px-8 py-3 font-semibold rounded-md bg-[#2198D4] hover:bg-[#26AAED] text-white text-base md:text-xl"
             >
               Login
             </button>
           </form>
-          <p className="text-[19px] mt-5 text-center sm:px-6 dark:text-gray-600">
+          <p className="text-base md:text-xl mt-5 text-center sm:px-6 dark:text-gray-600 font-semibold">
             Don't have an account?
             <Link
               to={"/auth/register"}
