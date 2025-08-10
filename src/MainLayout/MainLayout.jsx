@@ -9,7 +9,7 @@ import Footer from '../Components/Footer/Footer';
 const MainLayout = () => {
  
     return (
-        <div className='bg-[#F1E9F6]'>
+        <div className='bg-[#F1E9F6] font-poppins'>
            <Navbar></Navbar>
            
         <div
