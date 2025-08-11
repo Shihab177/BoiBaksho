@@ -45,7 +45,7 @@ const testimonials = [
 const TopReviewers = () => {
   return (
     <div className="md:container md:mx-auto mt-7 md:my-15 mx-2">
-      <h1 className="md:text-[36px] text-[28px] font-bold text-gray-700 text-center mb-6">Top Reviewers</h1>
+      <h1 className="md:text-[36px] text-[24px] font-medium text-gray-700 text-center mb-6">Top Reviewers</h1>
       
 
       <Swiper

@@ -38,13 +38,13 @@ const FeaturedCategories = () => {
   }, []);
   return (
     <div className="md:container md:mt-15 mt-7 mx-2 md:mx-auto">
-      <h1 className="md:text-[36px] text-[28px] font-bold  text-gray-700 text-center">
+      <h1 className="md:text-[36px] text-[24px] font-medium  text-gray-700 text-center">
         Featured Categories
       </h1>
       <div className=" rounded-sm  mt-5">
         <div className="grid lg:grid-cols-3 gap-4">
           <div className="rounded-md bg-[#D9F3DD] border-2 border-[#BEEBC3] shadow-sm max-h-[444px]">
-            <h2 className="text-[25px] font-semibold mt-3 text-center">
+            <h2 className="md:text-[25px] text-[20px] font-semibold mt-3 text-center">
               Fiction
             </h2>
            
@@ -75,7 +75,7 @@ const FeaturedCategories = () => {
             </div>
           </div>
           <div className="rounded-md bg-[#EDF2FA]  max-h-[444px]">
-            <h2 className="text-[25px] font-semibold mt-3 text-center">
+            <h2 className="md:text-[25px] text-[20px] font-semibold mt-3 text-center">
               Non-Fiction
             </h2>
            
@@ -107,7 +107,7 @@ const FeaturedCategories = () => {
           </div>
           
           <div className="rounded-md bg-[#D4E8EE] max-h-[444px]">
-            <h2 className="text-[25px] font-semibold mt-3 text-center">
+            <h2 className="md:text-[25px] text-[20px] font-semibold mt-3 text-center">
               Fantasy
             </h2> 
            

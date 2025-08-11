@@ -10,8 +10,8 @@ import book7 from "../../assets/book/book-7.png";
 import book8 from "../../assets/book/book-8.png";
 const TopReviewedBooks = () => {
   return (
-    <div className="md:container rounded-md  mx-auto my-7 md:my-15">
-      <h1 className="md:text-[36px] text-[28px]  font-bold text-gray-700 text-center">
+    <div className="md:container rounded-md mx-2 md:mx-auto my-7 md:my-15">
+      <h1 className="md:text-[36px] text-[24px]  font-medium text-gray-700 text-center">
         Top Reviewed & Upvote Books
       </h1>
       <div className="bg-white mt-5 overflow-y-auto max-h-430 rounded-md p-5 shadow-md">
