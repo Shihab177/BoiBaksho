@@ -102,7 +102,7 @@ const Register = () => {
   return (
     <motion.div initial={{ opacity: 0, scale: 0.95 }}
       animate={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.6 }} className="md:mt-[92px] mt-[58px]">
+      transition={{ duration: 0.6 }} className="md:mt-[92px] mt-[59px]">
       <div className="w-[360px] md:w-[500px] p-4  mb-6 rounded-md  sm:p-8 mx-auto mt-9 dark:bg-gray-50 dark:text-gray-800">
         <h2 className="mb-3 text-2xl md:text-4xl font-semibold text-center">
           Register your account
@@ -112,7 +112,7 @@ const Register = () => {
             onClick={handelGoogleLogin}
             aria-label="Login with Google"
             type="button"
-            className="flex w-full items-center justify-center text-base md:text-xl  p-4 space-x-4 border rounded-md focus:ring-2 focus:ring-offset-1 dark:border-gray-600 text-white bg-[#2198D4] hover:bg-[#26AAED]"
+            className="flex w-full items-center justify-center text-base md:text-xl py-3 md:py-3 space-x-4 border rounded-md focus:ring-2 focus:ring-offset-1 dark:border-gray-600 text-white bg-[#2198D4] hover:bg-[#26AAED]"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -121,7 +121,7 @@ const Register = () => {
             >
               <path d="M16.318 13.714v5.484h9.078c-0.37 2.354-2.745 6.901-9.078 6.901-5.458 0-9.917-4.521-9.917-10.099s4.458-10.099 9.917-10.099c3.109 0 5.193 1.318 6.38 2.464l4.339-4.182c-2.786-2.599-6.396-4.182-10.719-4.182-8.844 0-16 7.151-16 16s7.156 16 16 16c9.234 0 15.365-6.49 15.365-15.635 0-1.052-0.115-1.854-0.255-2.651z"></path>
             </svg>
-            <p className="text-white font-semibold">Login with Google</p>
+            <p className="text-white font-medium text-base md:text-xl">Login with Google</p>
           </button>
         </div>
         <div className="flex items-center w-full my-4">
@@ -137,7 +137,8 @@ const Register = () => {
                 type="text"
                 name="name"
                 required
-                className="w-full px-3 py-2 border rounded-md"
+                placeholder="Enter Your Name"
+                className="w-full px-3 py-2 border rounded-md placeholder:text-[16px] placeholder:font-medium text-[16px] font-medium"
               />
             </div>
             <div className="space-y-2">
@@ -146,7 +147,8 @@ const Register = () => {
                 type="text"
                 name="photo"
                 required
-                className="w-full px-3 py-2 border rounded-md"
+                placeholder="Enter Your Photo Url"
+                className="w-full px-3 py-2 border rounded-md placeholder:text-[16px] placeholder:font-medium text-[16px] font-medium"
               />
             </div>
             <div className="space-y-2">
@@ -158,8 +160,8 @@ const Register = () => {
                 name="email"
                 required
                 id="email"
-                placeholder="leroy@jenkins.com"
-                className="w-full px-3 py-2 border rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600"
+                placeholder="Enter Your Email"
+                className="w-full px-3 py-2 border rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600 placeholder:text-[16px] placeholder:font-medium text-[16px] font-medium"
               />
             </div>
             <div className="space-y-2">
