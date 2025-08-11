@@ -64,14 +64,16 @@ const Details = () => {
       initial={{ opacity: 0, scale: 0.95 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.6 }}
-      className="max-w-4xl bg-white p-5 rounded-md shadow-md my-4 mt-[81px] md:mb-7 mx-auto "
+      className="md:container md:mx-auto  my-4 pt-[55px] md:pt-[81px] md:mb-7 mx-2 "
     >
+      <h1 className="text-center text-[24px] md:text-[36px] font-medium ">Book Details</h1>
       {loading ? (
         <p className="text-[30px] text-center mt-7 font-semibold">
           Loading Book Details ....
         </p>
       ) : (
-        <div className="md:flex p-3 gap-5">
+        <div className=" md:flex md:justify-center">
+          <div className="md:flex p-3 gap-5">
           <div className="bg-gray-200 md:h-[400px] md:w-[254px] h-48 w-[174px] md:mx-0 mx-auto p-2 rounded-md">
             <img
               src={book.cover_photo}
@@ -108,7 +110,7 @@ const Details = () => {
               {user?.email === book?.user_email && readingStatus !== "Read" && (
                 <button
                   onClick={handleStatusUpdate}
-                  className="ml-3 px-4 py-1 bg-blue-600 text-white rounded-md text-sm hover:bg-blue-700"
+                  className="ml-3 px-4 py-1 bg-[#2198D4] hover:bg-[#26AAED] text-white rounded-md text-sm"
                 >
                   {readingStatus === "Want-to-Read"
                     ? "Start Reading"
@@ -133,6 +135,7 @@ const Details = () => {
               <Upvote book={book}></Upvote>
             </div>
           </div>
+        </div>
         </div>
       )}
 

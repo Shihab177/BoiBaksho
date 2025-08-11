@@ -40,7 +40,7 @@ const Banner = () => {
       initial={{ opacity: 0, scale: 0.95 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.6 }}
-      className="md:h-[540px] mt-[50px] md:mt-[81px] md:container mx-auto rounded-br-md rounded-bl-2xl h-[350px]"
+      className="md:h-[540px] pt-[55px] lg:pt-[81px] md:container xl:mx-auto -mx-2 rounded-br-md rounded-bl-2xl h-[350px]"
     >
       <Swiper
         navigation={true}

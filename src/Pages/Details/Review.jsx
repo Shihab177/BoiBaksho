@@ -141,7 +141,7 @@ const Review = ({ book }) => {
 
             <button
               onClick={handelReview}
-              className="mt-3 bg-blue-600 text-white px-5 py-2 rounded-md hover:bg-blue-700 font-semibold"
+              className="mt-3 bg-[#2198D4] hover:bg-[#26AAED] text-white px-5 py-2 rounded-md  font-semibold"
             >
               Post Review
             </button>

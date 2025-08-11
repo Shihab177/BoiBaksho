@@ -14,7 +14,7 @@ const ErrorPage = () => {
    <motion.div>
     <Navbar></Navbar>
      <motion.div 
-      className="flex flex-col items-center justify-center h-screen text-gray-800"
+      className="flex flex-col items-center justify-center h-screen text-center text-gray-800"
       initial={{ opacity: 0, scale: 0.95 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.9 }}

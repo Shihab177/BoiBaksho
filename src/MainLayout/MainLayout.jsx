@@ -14,7 +14,7 @@ const MainLayout = () => {
            
         <div
         
-          className="min-h-[calc(100vh-277px)]"
+          className="min-h-[calc(100vh-277px)] mx-2 xl:mx-0"
           
         >
         <Outlet />

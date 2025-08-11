@@ -37,7 +37,7 @@ const Upvote = ({ book }) => {
       <span className="text-black font-semibold">{likeCount} People Upvoted</span>
       <button
         onClick={handelClick}
-        className="flex items-center mt-2 gap-2 px-4 py-2 rounded-md text-white font-semibold bg-blue-500 hover:bg-blue-600 transition"
+        className="flex items-center mt-2 gap-2 px-4 py-2 rounded-md text-white font-semibold bg-[#2198D4] hover:bg-[#26AAED] transition"
       >
         <BiSolidUpArrow className="text-lg" />
         Upvote
