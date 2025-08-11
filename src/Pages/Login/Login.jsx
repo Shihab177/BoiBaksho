@@ -69,7 +69,7 @@ const Login = () => {
       className="pb-8 mt-[59px] md:mt-[92px]"
     >
       <div>
-        <div className="md:max-w-md p-2 mx-2 rounded-md sm:p-8 md:mx-auto mt-9 dark:bg-gray-50 dark:text-gray-800 ">
+        <div className="md:max-w-md p-6  rounded-md sm:p-8 md:mx-auto mt-9 dark:bg-gray-50 dark:text-gray-800 ">
           <h2 className="mb-3 text-[24px] md:text-[36px] md:text-4xl font-semibold text-center">
             Login to your account
           </h2>
