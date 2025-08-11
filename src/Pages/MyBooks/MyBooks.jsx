@@ -71,11 +71,11 @@ const MyBooks = () => {
       return <Loading></Loading>
     }
     return (
-       <div className="md:container mx-auto my-4 mt-[55px] md:mt-[81px] md:mb-10">
+       <div className="md:container mx-2 md:mx-auto my-4 pt-[55px] md:pt-[81px] md:mb-10">
    
       <motion.h1 initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.6 }} className="md:text-[36px] text-[28px] text-center font-bold text-gray-800">
+        transition={{ duration: 0.6 }} className="md:text-[36px] text-[24px] text-center font-medium text-gray-700">
         My added books
       </motion.h1>
 
@@ -83,7 +83,7 @@ const MyBooks = () => {
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.6 }}
-        className="bg-white mt-5 p-4 rounded-sm"
+        className=" mt-5 "
       >
         {loading ? (
           <div className="text-center min-h-screen font-semibold text-lg mt-10">
@@ -101,11 +101,11 @@ const MyBooks = () => {
 
         {
           books && 
-          <div className="grid lg:grid-cols-3 md:grid-cols-2 max-h-[600px] md:max-h-[762px] overflow-y-auto  gap-5">
+          <div className="grid lg:grid-cols-3 md:grid-cols-2 max-h-[1000px] md:max-h-[762px] overflow-y-auto  gap-5">
           {books.map((book) => (
             <div
               key={book._id}
-              className="bg-gray-200 max-w-[646px] shadow-md rounded-lg p-4 transition hover:shadow-xl"
+              className="bg-white max-w-[646px] shadow-md rounded-lg p-4 transition hover:shadow-xl"
             >
               <div className="">
                 <div className="lg:h-58 mb-5 mx-auto md:w-[150px] lg:w-[193px] h-38 w-[120px]">
@@ -134,7 +134,7 @@ const MyBooks = () => {
                  <p className='text-gray-700 font-semibold'>Overview: {book.book_overview}</p>
               </div>
               <div className="flex mt-6 gap-6">
-                <button  onClick={()=>navigate(`/bookUpdate/${book?._id}`)} className='text-[20px] font-semibold px-4 py-2 text-white rounded-sm bg-blue-500 hover:bg-blue-700'>Update</button>
+                <button  onClick={()=>navigate(`/bookUpdate/${book?._id}`)} className='text-[20px] font-semibold px-4 py-2 text-white rounded-sm bg-[#2198D4] hover:bg-[#26AAED]'>Update</button>
                 <button onClick={()=>handelDelete(book?._id)} className='text-[20px] font-semibold px-4 py-2 text-white rounded-sm bg-red-500 hover:bg-red-600'>Delete</button>
               </div>
             </div>

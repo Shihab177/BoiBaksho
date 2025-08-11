@@ -48,17 +48,17 @@ const Chart = ({ book }) => {
     <div>
       <div className="md:container bg-white rounded-md shadow-md p-4 mx-auto">
         <div>
-          <h2 className="md:text-[32px] text-[24px] font-semibold">
+          <h2 className="md:text-[30px] text-[20px] font-medium">
             <span className="">My </span>Bookshelf Summary
           </h2>
-          <p className="md:text-[22px] text-[20px] font-semibold">
+          <p className="md:text-[22px] text-[20px] font-medium">
             Total Books :  {book.length}
           </p>
-          <p className="text-[22px] text-center font-semibold">Categories:</p>
+          <p className="text-[20px] md:text-[22px] text-center font-medium">Categories:</p>
           <div className="flex mt-4 justify-around">
             {formattedData.map((item, index) => (
             
-              <p className="text-[19px] font-medium" key={index}>
+              <p className="md:text-[19px] text-[14px] font-medium" key={index}>
                 {item.name} : <span>{item?.Book}</span>
               </p>
             
@@ -68,9 +68,9 @@ const Chart = ({ book }) => {
       </div>
      
        { book.length > 0 &&
-        <div>
-                <h2 className="text-[32px] text-center text-[#28BB98] font-semibold">
-        <span className="text-blue-600 text-[36px]">C</span>hart by Category
+        <div className="mt-5">
+                <h2 className=" md:text-[36px] text-[24px] text-center  font-medium">
+        <span className="">C</span>hart by Category
       </h2>
       <div className=" mb-10 mt-2 bg-white h-full  rounded-md shadow-md">
        <ResponsiveContainer width="100%" height={400}>
