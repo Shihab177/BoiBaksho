@@ -102,9 +102,9 @@ const Register = () => {
   return (
     <motion.div initial={{ opacity: 0, scale: 0.95 }}
       animate={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.6 }} className="md:mt-[92px] mt-[59px]">
-      <div className="w-[360px] md:w-[500px] p-4  mb-6 rounded-md  sm:p-8 mx-auto mt-9 dark:bg-gray-50 dark:text-gray-800">
-        <h2 className="mb-3 text-2xl md:text-4xl font-semibold text-center">
+      transition={{ duration: 0.6 }} className="md:pt-[92px] pt-[59px]">
+      <div className="w-[360px] md:w-[500px] p-4  mb-6 rounded-md  sm:p-8 mx-auto ">
+        <h2 className="mb-3 text-2xl md:text-4xl font-semibold text-center md:mt-0 mt-2 text-gray-800">
           Register your account
         </h2>
         <div className="my-6 space-y-4">
@@ -112,7 +112,7 @@ const Register = () => {
             onClick={handelGoogleLogin}
             aria-label="Login with Google"
             type="button"
-            className="flex w-full items-center justify-center text-base md:text-xl py-3 md:py-3 space-x-4 border rounded-md focus:ring-2 focus:ring-offset-1 dark:border-gray-600 text-white bg-[#2198D4] hover:bg-[#26AAED]"
+            className="flex w-full  items-center justify-center text-base md:text-xl py-3 md:py-3 space-x-4 rounded-md focus:ring-2 focus:ring-offset-1  text-white bg-[#2198D4] hover:bg-[#26AAED]"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -129,7 +129,7 @@ const Register = () => {
           <p className="px-3 dark:text-gray-600">OR</p>
           <hr className="w-full dark:text-gray-600" />
         </div>
-        <form onSubmit={handelRegister} className="space-y-8 ">
+        <form onSubmit={handelRegister} className="space-y-8 text-black">
           <div className="space-y-4">
             <div className="space-y-2">
               <label className="text-[16px] font-semibold md:text-[18px]">Name</label>
@@ -138,7 +138,7 @@ const Register = () => {
                 name="name"
                 required
                 placeholder="Enter Your Name"
-                className="w-full px-3 py-2 border rounded-md placeholder:text-[16px] placeholder:font-medium text-[16px] font-medium"
+                className="w-full bg-white px-3 py-2 border border-[#26AAED] focus:outline-0 rounded-md placeholder:text-[16px] placeholder:font-medium text-[16px] font-medium"
               />
             </div>
             <div className="space-y-2">
@@ -148,7 +148,7 @@ const Register = () => {
                 name="photo"
                 required
                 placeholder="Enter Your Photo Url"
-                className="w-full px-3 py-2 border rounded-md placeholder:text-[16px] placeholder:font-medium text-[16px] font-medium"
+                className="w-full bg-white px-3 py-2 border border-[#26AAED] focus:outline-0 rounded-md placeholder:text-[16px] placeholder:font-medium text-[16px] font-medium"
               />
             </div>
             <div className="space-y-2">
@@ -161,7 +161,7 @@ const Register = () => {
                 required
                 id="email"
                 placeholder="Enter Your Email"
-                className="w-full px-3 py-2 border rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600 placeholder:text-[16px] placeholder:font-medium text-[16px] font-medium"
+                className="w-full px-3 py-2 bg-white focus:bg-white border focus:outline-0 border-[#26AAED] rounded-md placeholder:text-[16px] placeholder:font-medium text-[16px] font-medium"
               />
             </div>
             <div className="space-y-2">
@@ -175,13 +175,13 @@ const Register = () => {
                   type="password"
                   required
                   placeholder="*****"
-                  className="w-full px-3 py-2 border rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600"
+                  className="w-full px-3 py-2 bg-white border focus:outline-0 border-[#26AAED] rounded-md "
                 />
               </div>
               <a
                 rel="noopener noreferrer"
                 href="#"
-                className="text-[16px] hover:underline dark:text-gray-600"
+                className="text-[16px] md:text-[18px] text-blue-500  "
               >
                 Forgot password?
               </a>
@@ -198,7 +198,7 @@ const Register = () => {
           Already have an account?
           <Link
             to={"/Auth/login"}
-            className="underline text-blue-500 dark:text-gray-800"
+            className="underline text-[#2198D4] hover:text-[#26AAED]"
           >
             Login
           </Link>

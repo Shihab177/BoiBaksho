@@ -73,7 +73,7 @@ const BookUpdate = () => {
       </h2>
       <form
         onSubmit={handleSubmit}
-        className="space-y-4 text-[17px] font-semibold "
+        className="space-y-4 text-[17px] font-semibold text-black "
       >
         <div className="grid md:grid-cols-2 gap-y-3 md:gap-5">
           <fieldset>

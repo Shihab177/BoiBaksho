@@ -43,8 +43,8 @@ const FeaturedCategories = () => {
       </h1>
       <div className=" rounded-sm  mt-5">
         <div className="grid lg:grid-cols-3 gap-4">
-          <div className="rounded-md bg-[#D9F3DD] border-2 border-[#BEEBC3] shadow-sm max-h-[444px]">
-            <h2 className="md:text-[25px] text-[20px] font-semibold mt-3 text-center">
+          <div className="rounded-lg bg-[#D9F3DD] border-2 border-[#98D5A2] shadow-sm max-h-[444px]">
+            <h2 className="md:text-[25px] text-[20px] font-semibold mt-3 text-center text-black">
               Fiction
             </h2>
            
@@ -65,7 +65,7 @@ const FeaturedCategories = () => {
                       <img className="" src={book.cover_photo} alt="" />
                     </div>
                     <div className="flex flex-col gap-2">
-                     <p className="hover:text-blue-500 font-medium">{book?.book_title}</p>
+                     <p className="hover:text-blue-500 text-gray-900 font-medium">{book?.book_title}</p>
                      <p className="hover:text-blue-500 text-gray-600">{book?.book_author}</p>
                     </div>
                   </motion.div>
@@ -74,8 +74,8 @@ const FeaturedCategories = () => {
             )}
             </div>
           </div>
-          <div className="rounded-md bg-[#EDF2FA]  max-h-[444px]">
-            <h2 className="md:text-[25px] text-[20px] font-semibold mt-3 text-center">
+          <div className="rounded-lg bg-[#EDF2FA] border-2 border-[#A3BADD]  max-h-[444px]">
+            <h2 className="md:text-[25px] text-[20px] font-semibold mt-3 text-center text-black">
               Non-Fiction
             </h2>
            
@@ -96,7 +96,7 @@ const FeaturedCategories = () => {
                       <img className="" src={book.cover_photo} alt="" />
                     </div>
                     <div className="flex flex-col gap-2">
-                     <p className="hover:text-blue-500 font-medium">{book?.book_title}</p>
+                     <p className="hover:text-blue-500 font-medium text-gray-900">{book?.book_title}</p>
                      <p className="hover:text-blue-500 text-gray-600">{book?.book_author}</p>
                     </div>
                   </motion.div>
@@ -106,8 +106,8 @@ const FeaturedCategories = () => {
             </div>
           </div>
           
-          <div className="rounded-md bg-[#D4E8EE] max-h-[444px]">
-            <h2 className="md:text-[25px] text-[20px] font-semibold mt-3 text-center">
+          <div className="rounded-lg bg-[#D4E8EE] border-2 border-[#7FAAB1] max-h-[444px]">
+            <h2 className="md:text-[25px] text-[20px] font-semibold mt-3 text-center text-black">
               Fantasy
             </h2> 
            
@@ -128,7 +128,7 @@ const FeaturedCategories = () => {
                       <img className="" src={book.cover_photo} alt="" />
                     </div>
                     <div className="flex flex-col gap-2">
-                     <p className="hover:text-blue-500 font-medium">{book?.book_title}</p>
+                     <p className="hover:text-blue-500 font-medium text-gray-900">{book?.book_title}</p>
                      <p className="hover:text-blue-500 text-gray-600">{book?.book_author}</p>
                     </div>
                   </motion.div>

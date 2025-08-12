@@ -39,7 +39,7 @@ const AddBook = () => {
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.6 }} className="md:container mx-5 md:mx-auto pt-[55px] md:pt-[85px] my-4 md:mb-7 ">
       <h2 className="md:text-[36px] text-[24px] font-medium mb-4 text-center text-gray-700">Add A New Book</h2>
-      <form onSubmit={handleSubmit} className="space-y-4 text-[17px] font-semibold  ">
+      <form onSubmit={handleSubmit} className="space-y-4 text-[17px] font-semibold  text-black">
          <div className="grid md:grid-cols-2 md:gap-5 gap-y-3">
             <fieldset>
             <label className='text-[14px] md:text-[17px]' htmlFor="">Book Title</label>

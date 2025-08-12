@@ -48,62 +48,64 @@ const Chart = ({ book }) => {
     <div>
       <div className="md:container bg-white rounded-md shadow-md p-4 mx-auto">
         <div>
-          <h2 className="md:text-[30px] text-[20px] font-medium">
+          <h2 className="md:text-[30px] text-[20px] font-medium text-gray-800">
             <span className="">My </span>Bookshelf Summary
           </h2>
-          <p className="md:text-[22px] text-[20px] font-medium">
-            Total Books :  {book.length}
+          <p className="md:text-[22px] text-[20px] font-medium text-gray-700">
+            Total Books : {book.length}
           </p>
-          <p className="text-[20px] md:text-[22px] text-center font-medium">Categories:</p>
-          <div className="flex mt-4 justify-around">
+          <p className="text-[20px] md:text-[22px] text-center font-medium text-gray-800">
+            Categories:
+          </p>
+          <div className="flex mt-4 justify-around text-gray-700">
             {formattedData.map((item, index) => (
-            
               <p className="md:text-[19px] text-[14px] font-medium" key={index}>
                 {item.name} : <span>{item?.Book}</span>
               </p>
-            
-          ))}
-        </div>
+            ))}
           </div>
-      </div>
-     
-       { book.length > 0 &&
-        <div className="mt-5">
-                <h2 className=" md:text-[36px] text-[24px] text-center  font-medium">
-        <span className="">C</span>hart by Category
-      </h2>
-      <div className=" mb-10 mt-2 bg-white h-full  rounded-md shadow-md">
-       <ResponsiveContainer width="100%" height={400}>
-  <PieChart>
-    <Pie
-      data={formattedData}
-      dataKey="Book"
-      nameKey="name"
-      cx="50%"
-      cy="50%"
-      outerRadius={150}
-      fill="#8884d8"
-      label
-    >
-      {formattedData.map((entry, index) => (
-        <Cell key={`cell-${index}`} fill={colors[index % colors.length]} />
-      ))}
-    </Pie>
-    <Tooltip
-      contentStyle={{
-        backgroundColor: "rgba(255, 255, 255, 0.8)",
-        border: "none",
-        borderRadius: "8px",
-        boxShadow: "0 0 10px rgba(0, 0, 0, 0.1)",
-      }}
-      cursor={{ fill: "rgba(0, 0, 0, 0.05)" }}
-    />
-  </PieChart>
-</ResponsiveContainer>
-
-      </div>
         </div>
-       }
+      </div>
+
+      {book.length > 0 && (
+        <div className="mt-5">
+          <h2 className=" md:text-[36px] text-[24px] text-center  font-medium text-gray-800">
+            <span className="">C</span>hart by Category
+          </h2>
+          <div className=" mb-10 mt-2 bg-white h-full  rounded-md shadow-md">
+            <ResponsiveContainer width="100%" height={400}>
+              <PieChart>
+                <Pie
+                  data={formattedData}
+                  dataKey="Book"
+                  nameKey="name"
+                  cx="50%"
+                  cy="50%"
+                  outerRadius={150}
+                  fill="#8884d8"
+                  label
+                >
+                  {formattedData.map((entry, index) => (
+                    <Cell
+                      key={`cell-${index}`}
+                      fill={colors[index % colors.length]}
+                    />
+                  ))}
+                </Pie>
+                <Tooltip
+                  contentStyle={{
+                    backgroundColor: "rgba(255, 255, 255, 0.8)",
+                    border: "none",
+                    borderRadius: "8px",
+                    boxShadow: "0 0 10px rgba(0, 0, 0, 0.1)",
+                  }}
+                  cursor={{ fill: "rgba(0, 0, 0, 0.05)" }}
+                />
+              </PieChart>
+            </ResponsiveContainer>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

@@ -54,20 +54,21 @@ const Navbar = () => {
     };
   }, [menu]);
 
+
   return (
     <div className="relative">
-      <nav className="fixed top-0 left-0 w-full z-50 py-3 px-2 flex items-center justify-between bg-[#F1E9F7] shadow-md">
+      <nav className="fixed top-0 left-0 w-full z-50 py-3 px-2 flex items-center justify-between  bg-[#F1E9F7] shadow-md">
         <div className="flex lg:w-4/12 md:w-3/12 gap-6">
           <img className="w-14 h-14 lg:flex hidden" src={logo} alt="Logo" />
-          <button ref={buttonRef} className="md:hidden" onClick={handelMenu}>
+          <button ref={buttonRef} className="md:hidden text-black" onClick={handelMenu}>
             <CiMenuFries size={27} />
           </button>
 
-          <h1 className="lg:text-[38px] md:text-[28px] text-[20px] font-semibold md:font-bold">
+          <h1 className="lg:text-[38px] md:text-[28px] text-[20px] font-semibold md:font-bold text-black">
             BoiBaksho
           </h1>
         </div>
-        <div className="lg:w-6/12 md:w-7/12 md:flex hidden xl:text-[20px] md:text-[17px] font-semibold justify-between">
+        <div className="lg:w-6/12 md:w-7/12 md:flex hidden xl:text-[20px] md:text-[17px] font-semibold justify-between text-black">
           <NavLink to="/">
             <p>Home</p>
           </NavLink>

@@ -44,7 +44,7 @@ const testimonials = [
 
 const TopReviewers = () => {
   return (
-    <div className="md:container md:mx-auto mt-7 md:my-15 mx-2">
+    <div className="md:container md:mx-auto mt-7 md:my-15 mx-2 rounded-lg">
       <h1 className="md:text-[36px] text-[24px] font-medium text-gray-700 text-center mb-6">Top Reviewers</h1>
       
 
@@ -55,11 +55,11 @@ const TopReviewers = () => {
         pagination={{ clickable: true }}
         spaceBetween={30}
         slidesPerView={1}
-        className="pb-16 " // 👈 Added padding-bottom
+        className="pb-16 rounded-lg" // 👈 Added padding-bottom
       >
         {testimonials.map((item, index) => (
           <SwiperSlide key={index}>
-            <div className="flex flex-col md:flex-row pt-5  bg-white justify-center gap-15 text-center md:text-left">
+            <div className="flex flex-col md:flex-row pt-5 rounded-lg bg-white justify-center gap-15 text-center md:text-left">
               <img
                 src={item.image}
                 alt={item.name}
@@ -71,8 +71,8 @@ const TopReviewers = () => {
                 </p>
                 <p className="text-yellow-800 font-bold mb-4">Review : {item.review}</p>
 
-                <p className="text-[27px] font-semibold">One review:</p>
-                <p className="font-semibold">Book Name : {item.Book}</p>
+                <p className="text-[27px] font-semibold text-gray-900">One review:</p>
+                <p className="font-semibold text-gray-800">Book Name : {item.Book}</p>
                 <p className="text-black font-semibold text-lg leading-relaxed italic mb-8">
                   {item.text}
                 </p>

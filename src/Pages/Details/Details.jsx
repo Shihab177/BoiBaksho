@@ -66,7 +66,7 @@ const Details = () => {
       transition={{ duration: 0.6 }}
       className="md:container md:mx-auto  my-4 pt-[55px] md:pt-[81px] md:mb-7 mx-2 "
     >
-      <h1 className="text-center text-[24px] md:text-[36px] font-medium ">Book Details</h1>
+      <h1 className="text-center text-[24px] md:text-[36px] font-medium text-gray-800">Book Details</h1>
       {loading ? (
         <p className="text-[30px] text-center mt-7 font-semibold">
           Loading Book Details ....
@@ -84,27 +84,26 @@ const Details = () => {
 
           {/* Book Info */}
           <div className="space-y-3 mt-4 md:mt-0 md:w-[calc(100%-254px)]">
-            <h2 className="md:text-3xl text-2xl font-bold text-gray-800">
+            <h2 className="md:text-3xl text-2xl font-semibold text-gray-800">
               {book.book_title}
             </h2>
-            <p>
-              <span className="font-semibold text-gray-700">Author:</span>
+            <p className="text-gray-800">
+              <span className="font-semibold text-gray-800">Author: </span>
               {book?.book_author}
             </p>
-            <p>
-              <span className="font-semibold text-gray-700">Category:</span>
+            <p className="text-gray-800">
+              <span className="font-semibold text-gray-800">Category: </span>
               {book?.book_category}
             </p>
-            <p>
-              <span className="font-semibold text-gray-700">Total Pages:</span>{" "}
+            <p className="text-gray-800">
+              <span className="font-semibold text-gray-800">Total Pages: </span>{" "}
               {book?.total_page}
             </p>
 
             {/*  Reading Status with Conditional Button */}
-            <p>
-              <span className="font-semibold text-gray-700 mr-1">
-                Reading Status:
-              </span>
+            <p className="text-gray-800">
+              <span className="font-semibold text-gray-800 mr-1">
+                Reading Status: </span>
               {readingStatus}
 
               {user?.email === book?.user_email && readingStatus !== "Read" && (
@@ -120,10 +119,10 @@ const Details = () => {
             </p>
 
             <div>
-              <h4 className="font-semibold text-gray-700">Overview:</h4>
-              <p className="text-gray-600">{book?.book_overview}</p>
+              <h4 className="font-semibold text-gray-800">Overview:</h4>
+              <p className="text-gray-800">{book?.book_overview}</p>
             </div>
-            <div className="mt-4 text-sm text-gray-500">
+            <div className="mt-4 text-sm text-gray-800">
               <p>
                 <strong>Uploaded by:</strong> {book?.user_name}
               </p>

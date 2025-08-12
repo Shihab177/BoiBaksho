@@ -36,7 +36,7 @@ const Profile = () => {
       transition={{ duration: 0.6 }}
     >
       <div className="md:container mx-auto p-3 md:p-4 bg-white shadow-md rounded-md my-5 ">
-        <h1 className="font-medium text-center text-[24px] md:text-[30px]">Profile</h1>
+        <h1 className="font-medium text-center text-[24px] md:text-[30px] text-gray-800">Profile</h1>
           <div className="flex items-center gap-5">
             <img
             className="border-gray-300 rounded-full border-3 md:h-30 md:w-30 h-20 w-20"
@@ -44,7 +44,7 @@ const Profile = () => {
             src={user?.photoURL}
             alt=""
           />
-          <div className="text-[20px] flex flex-col md:gap-3 gap-1 font-semibold">
+          <div className="text-[20px] flex flex-col md:gap-3 gap-1 font-semibold text-gray-700">
             <h1 className="md:text-[26px] text-[16px] font-medium"> {user?.displayName}</h1>
             <h1 className="text-gray-600 md:text-[26px] text-[16px] font-medium">{user?.email}</h1>
           </div>

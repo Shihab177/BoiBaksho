@@ -133,7 +133,7 @@ const Review = ({ book }) => {
         {user && (
           <div className="mt-6">
             <textarea
-              className="w-full border rounded-md p-3 resize-none focus:outline-blue-400"
+              className="w-full border rounded-md p-3 dark:border-gray-900 text-black resize-none focus:outline-blue-400"
               rows="4"
               ref={textRef}
               placeholder="✍️ Write your review here..."

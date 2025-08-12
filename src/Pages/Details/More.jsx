@@ -60,10 +60,10 @@ console.log(review)
 
   return (
     <div className="space-x-2">
-      <button onClick={handleEditBtn}>
+      <button className="text-black" onClick={handleEditBtn}>
         <FaEdit size={22} />
       </button>
-      <button onClick={handleDelete}>
+      <button className="text-red-400" onClick={handleDelete}>
         <MdDelete size={22} />
       </button>
 

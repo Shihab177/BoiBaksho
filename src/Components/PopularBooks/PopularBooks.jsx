@@ -51,7 +51,7 @@ const PopularBooks = () => {
                   />
                 </div>
                 <div className="flex flex-col lg:mt-0 mt-2 xl:w-[calc(100%-233px)] gap-2">
-                  <h2 className="text-xl font-semibold">{book.book_title}</h2>
+                  <h2 className="text-xl font-semibold text-black">{book.book_title}</h2>
                   <p className="text-gray-800 font-semibold">
                     Author: {book.book_author}
                   </p>

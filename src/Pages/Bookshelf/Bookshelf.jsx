@@ -74,7 +74,7 @@ const Bookshelf = () => {
   return (
     <div className="md:container h-full  md:mx-auto md:mb-10 my-4 mx-2">
       <div className="pt-[55px] md:pt-[85px]">
-        <h1 className="text-[24px] md:text-[36px] font-medium text-center"> Browse All Books</h1>
+        <h1 className="text-[24px] md:text-[36px] font-medium text-center text-gray-800"> Browse All Books</h1>
       {/* Search and Filter UI */}
       <div className="flex flex-col mx-4 md:mx-0 md:flex-row gap-4 justify-center md:items-center mt-5">
         
@@ -83,13 +83,13 @@ const Bookshelf = () => {
           placeholder="Search by title or author"
           value={searchTerm} 
           onChange={(e) => setSearchTerm(e.target.value)} 
-          className="border-2 border-[#26AAED] p-2 rounded-3xl w-full md:w-1/2"
+          className="border-2 border-[#26AAED] p-2 rounded-3xl w-full md:w-1/2 focus:outline-0 text-black px-4"
         />
 
         <select
           value={statusFilter} 
           onChange={(e) => setStatusFilter(e.target.value)} 
-          className="border-2 border-[#26AAED] p-2 rounded w-40 md:w-1/4"
+          className="border-2 border-[#26AAED] p-2 rounded w-40 md:w-1/4 text-black focus:outline-0"
         >
           <option value="">All Reading Status</option>
           <option value="Read">Read</option>
@@ -125,7 +125,7 @@ const Bookshelf = () => {
                     />
                   </div>
                   <div className="flex flex-col mt-2 md:mt-0 xl:w-[calc(100%-233px)] gap-2">
-                    <h2 className="text-xl font-semibold">{book.book_title}</h2>
+                    <h2 className="text-xl font-semibold text-gray-900">{book.book_title}</h2>
                     <p className="text-gray-800 font-semibold">
                       Author: {book.book_author}
                     </p>
@@ -158,7 +158,7 @@ const Bookshelf = () => {
           <button
             onClick={handlePrevPage}
             disabled={currentPage === 1}
-            className={`px-4 py-2 rounded-md font-semibold ${
+            className={`px-4 py-2 rounded-md font-semibold text-black ${
               currentPage === 1
                 ? "bg-gray-300 cursor-not-allowed"
                 : "bg-[#2198D4] hover:bg-[#26AAED] text-white"
@@ -166,13 +166,13 @@ const Bookshelf = () => {
           >
             Previous
           </button>
-          <p className="text-lg font-semibold">
+          <p className="text-lg font-semibold text-black">
             Page {currentPage} of {totalPages}
           </p>
           <button
             onClick={handleNextPage}
             disabled={currentPage === totalPages}
-            className={`px-4 py-2 rounded-md font-semibold ${
+            className={`px-4 py-2 rounded-md font-semibold text-black ${
               currentPage === totalPages
                 ? "bg-gray-300 cursor-not-allowed"
                 : "bg-[#2198D4] hover:bg-[#26AAED] text-white"

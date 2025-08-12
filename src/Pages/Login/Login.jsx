@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import { AuthContext } from "../../Provider/AuthProvider";
 import Swal from "sweetalert2";
 import { Link, useLocation, useNavigate } from "react-router";
-
 const Login = () => {
   const location = useLocation();
   const navigate = useNavigate();
@@ -66,11 +65,12 @@ const Login = () => {
       initial={{ opacity: 0, scale: 0.95 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.6 }}
-      className="pb-8 mt-[59px] md:mt-[92px]"
+      className="pb-8 pt-[59px] md:pt-[92px]"
     >
       <div>
-        <div className="md:max-w-md p-6  rounded-md sm:p-8 md:mx-auto mt-9 dark:bg-gray-50 dark:text-gray-800 ">
-          <h2 className="mb-3 text-[24px] md:text-[36px] md:text-4xl font-semibold text-center">
+       
+        <div className="md:max-w-md p-6  rounded-md sm:p-8 md:mx-auto  ">
+          <h2 className="mb-3 text-[24px] md:text-[36px] md:text-4xl font-semibold text-center text-gray-800">
             Login to your account
           </h2>
           <div className="my-6 space-y-4">
@@ -78,7 +78,7 @@ const Login = () => {
               onClick={handelGoogleLogin}
               aria-label="Login with Google"
               type="button"
-              className="flex items-center justify-center w-full py-3 md:py-3 space-x-4 border rounded-md focus:ring-2 focus:ring-offset-1 dark:border-gray-600 bg-[#2198D4] hover:bg-[#26AAED] text-white text-base md:text-2xl"
+              className="flex items-center justify-center w-full py-3 md:py-3 space-x-4 border rounded-md focus:ring-2 focus:ring-offset-1 bg-[#2198D4] hover:bg-[#26AAED] text-white text-base md:text-2xl"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -95,7 +95,7 @@ const Login = () => {
             <p className="px-3 dark:text-gray-600 text-sm md:text-lg">OR</p>
             <hr className="w-full dark:text-gray-600" />
           </div>
-          <form onSubmit={handelLogin} className="space-y-8">
+          <form onSubmit={handelLogin} className="space-y-8 text-black">
             <div className="space-y-4">
               <div className="space-y-2">
                 <label htmlFor="email" className="block text-[16px] font-semibold md:text-[18px]">
@@ -106,7 +106,7 @@ const Login = () => {
                   name="email"
                   id="email"
                   placeholder="Enter Your Email"
-                  className="w-full px-3 py-2 placeholder:text-[16px] placeholder:font-medium font-medium border rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600"
+                  className="w-full px-3 text-black py-2 placeholder:text-[16px] placeholder:font-medium font-medium border border-[#26AAED] rounded-md focus:outline-0 bg-white"
                 />
               </div>
               <div className="space-y-2">
@@ -120,7 +120,7 @@ const Login = () => {
                   name="password"
                   id="password"
                   placeholder="*****"
-                  className="w-full px-3 py-2 border rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600"
+                  className="w-full px-3 py-2 border border-[#26AAED] focus:outline-0 rounded-md bg-white"
                 />
                 <p className="text-sm md:text-lg hover:underline text-blue-600 cursor-pointer">
                   Forgot password?
@@ -134,11 +134,11 @@ const Login = () => {
               Login
             </button>
           </form>
-          <p className="text-base md:text-xl mt-5 text-center sm:px-6 dark:text-gray-600 font-semibold">
+          <p className="text-base md:text-xl mt-5 text-center sm:px-6 text-black font-semibold">
             Don't have an account?
             <Link
               to={"/auth/register"}
-              className="underline text-blue-500 dark:text-gray-800"
+              className="underline text-[#2198D4] hover:text-[#26AAED]"
             >
               Register
             </Link>
